@@ -1,0 +1,119 @@
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+body {
+    background-color: white;
+    margin-bottom: 60px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.page__container {
+    margin: 0 auto;
+    width: 320px;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+}
+
+.main-header__top {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1F9B00;
+}
+
+.form__chart {
+    width: 285px;
+    margin: 35px auto;
+}
+
+.form__legend {
+    margin: 0 auto;
+}
+
+.main-header__fieldimg {
+    width: 320px;
+}
+
+.form__choice-wrapper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form {
+    margin-top: 20px;
+    border: 5px inset lightblue;
+}
+
+.table-wrapper__table {
+    margin-top: 20px;
+    border: 5px inset lightblue;
+}
+
+.table-wrapper__table th {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+
+.table-wrapper__table td {
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+.main-info__map-wrapper {
+    margin: 20px 0px 20px 0px;
+}
+
+.main-info__map-wrapper img {
+    width: 320px;
+}
+
+.main-footer__wrapper {
+    background-color: #1F9B00;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer__address {
+    display: block;
+    width: 112px;
+}
+
+.main-footer__about {
+    display: block;
+    width: 155px;
+}
+
+.main-footer__logo {
+    margin: auto 0;
+}
+
+
+@media (min-width: 768px) {
+    .page__container {
+        width: 768px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page__container {
+        width: 1200px;
+    }
+}
+

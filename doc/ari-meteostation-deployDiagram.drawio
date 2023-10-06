@@ -1,0 +1,151 @@
+<mxfile host="app.diagrams.net" modified="2023-09-30T15:49:40.664Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36" etag="wkfHq3CmW3ogYAB6w8ew" version="21.8.0" type="device">
+  <diagram name="Страница 1" id="3UtwikSYcavfptNBDR6d">
+    <mxGraphModel dx="2100" dy="1084" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Сервер АФИ&lt;br&gt;(C# ASP NET 6 MVC | IP/DNS)&lt;/font&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="40" y="30" width="620" height="780" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-24" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="240" y="106" width="210" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-2" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry width="210" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-3" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;База данных метеостанции&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry y="40" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-4" value="Дата" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry x="20" y="90" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-5" value="Температура почвы" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry x="120" y="90" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-7" value="Солнечная радиация" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry x="20" y="140" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-8" value="Влажность почвы" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry x="120" y="140" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-9" value="Температура воздуха" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry x="20" y="184" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-10" value="Скорость и направление ветра" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-24" vertex="1">
+          <mxGeometry x="110" y="190" width="90" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-25" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="60" y="444" width="660" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-13" value="&lt;font style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;Кросс-платформенное приложение C#&lt;/span&gt;&lt;br&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;транслятор-маршрутизатор запросов на отображение данных (Model View Controller)&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" parent="uawzwrlSfg4TmnD1LO4R-25" vertex="1">
+          <mxGeometry width="567.3684210526316" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-7" value="&lt;b&gt;Model&lt;/b&gt;&lt;br&gt;- Архитектура классов&lt;br&gt;- Логика работы с базой данных метеостанции&lt;br&gt;- Логика работы веб-сервера&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-25" vertex="1">
+          <mxGeometry x="11.58" y="96" width="128.42" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-8" value="&lt;b&gt;Controller&lt;/b&gt;&lt;br&gt;- Связь модели и представления&lt;br&gt;- Логика трансформации данных от модели к представлению и от представления к модели" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-25" vertex="1">
+          <mxGeometry x="217.1" y="96" width="133.16" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="uawzwrlSfg4TmnD1LO4R-25" source="pTcO-I0o6w5sAaPJSsjS-8" target="pTcO-I0o6w5sAaPJSsjS-7" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="uawzwrlSfg4TmnD1LO4R-25" source="pTcO-I0o6w5sAaPJSsjS-7" target="pTcO-I0o6w5sAaPJSsjS-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-9" value="&lt;b&gt;View&lt;br&gt;&lt;/b&gt;- Логика отображения данных на сайте&lt;br&gt;- Архитектура HTML/CSS/JS приложения&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-25" vertex="1">
+          <mxGeometry x="440" y="96" width="110" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="uawzwrlSfg4TmnD1LO4R-25" source="pTcO-I0o6w5sAaPJSsjS-8" target="pTcO-I0o6w5sAaPJSsjS-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-20" value="Модель&lt;br&gt;представления" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="uawzwrlSfg4TmnD1LO4R-25" vertex="1">
+          <mxGeometry x="340" y="101" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-26" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="uawzwrlSfg4TmnD1LO4R-13" target="uawzwrlSfg4TmnD1LO4R-2" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="390" y="640" as="sourcePoint" />
+            <mxPoint x="490" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-28" value="&lt;font style=&quot;font-size: 26px;&quot;&gt;Интернет&lt;/font&gt;" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="1" vertex="1">
+          <mxGeometry x="670" y="250" width="360" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-71" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=300;entryDy=145;entryPerimeter=0;" parent="1" source="uawzwrlSfg4TmnD1LO4R-62" target="uawzwrlSfg4TmnD1LO4R-55" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="360" />
+              <mxPoint x="1195" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-62" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Внешняя среда&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="720" y="60" width="220" height="88.75" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-68" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="1060" y="10" width="280" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-55" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Метеостанция в Меньково&lt;/font&gt;" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry width="280" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-56" value="датчик влажности воздуха" style="whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry x="10" y="53.75" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-57" value="датчик температуры почвы" style="whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry x="140" y="116.25" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-58" value="датчик температуры воздуха" style="whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry x="10" y="116.25" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-59" value="солнечная батарея" style="whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry x="140" y="53.75" width="120" height="37.5" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-60" value="датчик влажности почвы" style="whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry x="10" y="176.25" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-61" value="датчик направления ветра" style="whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-68" vertex="1">
+          <mxGeometry x="140" y="176.25" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=187.5;entryPerimeter=0;exitX=1.014;exitY=0.217;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="uawzwrlSfg4TmnD1LO4R-55" target="uawzwrlSfg4TmnD1LO4R-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="660" y="340" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1279" y="380" />
+              <mxPoint x="640" y="380" />
+              <mxPoint x="640" y="294" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="uawzwrlSfg4TmnD1LO4R-29" target="pTcO-I0o6w5sAaPJSsjS-8" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="730" y="490" />
+              <mxPoint x="730" y="880" />
+              <mxPoint x="450" y="880" />
+              <mxPoint x="450" y="632" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-19" value="HTTP Запрос" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" parent="pTcO-I0o6w5sAaPJSsjS-13" vertex="1" connectable="0">
+          <mxGeometry x="0.3655" y="-8" relative="1" as="geometry">
+            <mxPoint x="21" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-18" value="" style="group" parent="1" vertex="1" connectable="0">
+          <mxGeometry x="1050" y="390" width="320" height="390.2439024390244" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-29" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Веб-браузер клиента&lt;br&gt;&lt;/span&gt;(HTML/CSS/JS)" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;" parent="pTcO-I0o6w5sAaPJSsjS-18" vertex="1">
+          <mxGeometry width="320" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-49" value="" style="group" parent="pTcO-I0o6w5sAaPJSsjS-18" vertex="1" connectable="0">
+          <mxGeometry x="30" y="58.536585365853625" width="260" height="331.70731707317077" as="geometry" />
+        </mxCell>
+        <mxCell id="uawzwrlSfg4TmnD1LO4R-30" value="Сайт в браузере" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fontSize=14;" parent="uawzwrlSfg4TmnD1LO4R-49" vertex="1">
+          <mxGeometry width="260" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="pTcO-I0o6w5sAaPJSsjS-10" value="Отображение представления (View) на стороне конечного пользователя" style="rounded=0;whiteSpace=wrap;html=1;" parent="uawzwrlSfg4TmnD1LO4R-49" vertex="1">
+          <mxGeometry y="51.464146341463405" width="250" height="91.21951219512195" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
