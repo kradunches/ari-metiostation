@@ -13,6 +13,7 @@
     <SourceRoot Include="C:\Users\kradun\.nuget\packages\" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.11\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore\7.0.11\buildTransitive\net6.0\Microsoft.EntityFrameworkCore.props')" />
     <Import Project="$(NuGetPackageRoot)blazor-apexcharts\1.2.1\buildTransitive\Blazor-ApexCharts.props" Condition="Exists('$(NuGetPackageRoot)blazor-apexcharts\1.2.1\buildTransitive\Blazor-ApexCharts.props')" />
   </ImportGroup>
 </Project>

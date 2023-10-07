@@ -1,7 +1,10 @@
+using ServerMVC.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddTransient<IMeasurementRepository, MeasurementRepository>();
 
 var app = builder.Build();
 

@@ -1,4 +1,5 @@
-﻿@model ServerMVC.Models.Measurement[];
+﻿@model IQueryable<Measurement>;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = null;
@@ -100,7 +101,7 @@
                             <tr><th>date</th><th>t_pow</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
                         </thead>
                         <tbody>
-                            @foreach (Measurement measure in Model)
+                            @foreach (var measure in Model)
                             {
                                 <tr>
                                     <td>@measure.measure_date</td>
