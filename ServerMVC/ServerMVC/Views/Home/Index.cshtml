@@ -28,84 +28,19 @@
         </header>
         <main class="main-info">
             <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
-            <div class="main-info">
-                <fieldset class="main-info__form form">
-                    <legend class="form__legend">Отобразить t воздуха за:</legend>
-                    <div class="form__choice-wrapper">
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="oneTW" name="TW" value="1" checked />
-                            <label class="form__choice-description" for="oneTW">1 день</label>
-                        </div>
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="threeTW" name="TW" value="3" />
-                            <label class="form__choice-description" for="threeTW">3 дня</label>
-                        </div>
-                    </div>
-                    <div class="form__chart form__chart--twind"></div>
-                </fieldset>
-            </div>
-            <div class="main-info">
-            </div>
-            <div class="main-info">
-                <fieldset class="main-info__form form">
-                    <legend class="form__legend">Отобразить p воздуха за:</legend>
-                    <div class="form__choice-wrapper">
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="onePW" name="PW" value="1" checked />
-                            <label class="form__choice-description" for="onePW">1 день</label>
-                        </div>
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="threePW" name="PW" value="3" />
-                            <label class="form__choice-description" for="threePW">3 дня</label>
-                        </div>
-                    </div>
-                    <div class="form__chart form__chart--pwind"></div>
-                </fieldset>
-            </div>
-            <div class="main-info">
-                <fieldset class="main-info__form form">
-                    <legend class="form__legend">Отобразить t почвы за:</legend>
-                    <div class="form__choice-wrapper">
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="oneTS" name="TS" value="1" checked />
-                            <label class="form__choice-description" for="oneTS">1 день</label>
-                        </div>
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="threeTS" name="TS" value="3" />
-                            <label class="form__choice-description" for="threeTS">3 дня</label>
-                        </div>
-                    </div>
-                    <div class="form__chart form__chart--tsoil"></div>
-                </fieldset>
-            </div>
-            <div class="main-info">
-                <fieldset class="main-info__form form">
-                    <legend class="form__legend">Отобразить кол-во осадков за:</legend>
-                    <div class="form__choice-wrapper">
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="onePC" name="PC" value="1" checked />
-                            <label class="form__choice-description" for="onePC">1 день</label>
-                        </div>
-                        <div class="form__radio-wrapper">
-                            <input class="form__radio" type="radio" id="threePC" name="PC" value="3" />
-                            <label class="form__choice-description" for="threePC">3 дня</label>
-                        </div>
-                    </div>
-                    <div class="form__chart form__chart--precipitation"></div>
-                </fieldset>
-            </div>
+            @Html.Partial("Charts")
             <div class="main-info table-wrapper">
                 @{
                     <table class="table-wrapper__table">
                         <thead>
-                            <tr><th>date</th><th>t_pow</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
+                            <tr><th>date</th><th>t_pov</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
                         </thead>
                         <tbody>
                             @foreach (var measure in Model)
                             {
                                 <tr>
                                     <td>@measure.measure_date</td>
-                                    <td>@measure.t_pow</td>
+                                    <td>@measure.t_pov</td>
                                     <td>@measure.far</td>
                                     <td>@measure.rh</td>
                                     <td>@measure.t</td>

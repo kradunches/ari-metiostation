@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {}
+    "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {}
   },
   "projects": {
-    "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {
+    "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
+        "projectUniqueName": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
         "projectName": "ServerMVC",
-        "projectPath": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
+        "projectPath": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
         "packagesPath": "C:\\Users\\kradun\\.nuget\\packages\\",
-        "outputPath": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\obj\\",
+        "outputPath": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kradun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,7 +44,19 @@
               "target": "Package",
               "version": "[1.2.1, )"
             },
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[7.0.11, )"
             }

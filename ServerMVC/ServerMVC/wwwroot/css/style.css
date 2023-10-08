@@ -57,8 +57,10 @@ body {
 }
 
 .table-wrapper__table {
+    box-sizing: border-box;
     margin-top: 20px;
-    border: 5px inset lightblue;
+    /*border: 5px inset lightblue;*/
+    border: 0px;
 }
 
 .table-wrapper__table th {

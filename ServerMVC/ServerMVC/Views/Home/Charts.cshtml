@@ -1,0 +1,72 @@
+﻿@* @model ServerMVC.Models.ChoiceModel; *@
+
+@{
+    Layout = null;
+}
+
+<div class="chart-area">
+    <div class="chart-area__concrete">
+        <fieldset class="main-info__form form">
+            <legend class="form__legend">Отобразить t воздуха за:</legend>
+            <div class="form__choice-wrapper">
+                <div class="form__radio-wrapper">
+                    @* <input class="form__radio" type="radio" id="oneTW" name="TW" value="1" checked />
+                    <label class="form__choice-description" for="oneTW">1 день</label> *@
+                </div>
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="threeTW" name="TW" value="3" />
+                    <label class="form__choice-description" for="threeTW">3 дня</label>
+                </div>
+            </div>
+            <div class="form__chart form__chart--twind"></div>
+        </fieldset>
+    </div>
+    <div class="chart-area__concrete">
+        <fieldset class="main-info__form form">
+            <legend class="form__legend">Отобразить p воздуха за:</legend>
+            <div class="form__choice-wrapper">
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="onePW" name="PW" value="1" checked />
+                    <label class="form__choice-description" for="onePW">1 день</label>
+                </div>
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="threePW" name="PW" value="3" />
+                    <label class="form__choice-description" for="threePW">3 дня</label>
+                </div>
+            </div>
+            <div class="form__chart form__chart--pwind"></div>
+        </fieldset>
+    </div>
+    <div class="chart-area__concrete">
+        <fieldset class="main-info__form form">
+            <legend class="form__legend">Отобразить t почвы за:</legend>
+            <div class="form__choice-wrapper">
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="oneTS" name="TS" value="1" checked />
+                    <label class="form__choice-description" for="oneTS">1 день</label>
+                </div>
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="threeTS" name="TS" value="3" />
+                    <label class="form__choice-description" for="threeTS">3 дня</label>
+                </div>
+            </div>
+            <div class="form__chart form__chart--tsoil"></div>
+        </fieldset>
+    </div>
+    <div class="chart-area__concrete">
+        <fieldset class="main-info__form form">
+            <legend class="form__legend">Отобразить кол-во осадков за:</legend>
+            <div class="form__choice-wrapper">
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="onePC" name="PC" value="1" checked />
+                    <label class="form__choice-description" for="onePC">1 день</label>
+                </div>
+                <div class="form__radio-wrapper">
+                    <input class="form__radio" type="radio" id="threePC" name="PC" value="3" />
+                    <label class="form__choice-description" for="threePC">3 дня</label>
+                </div>
+            </div>
+            <div class="form__chart form__chart--precipitation"></div>
+        </fieldset>
+    </div>
+</div>
