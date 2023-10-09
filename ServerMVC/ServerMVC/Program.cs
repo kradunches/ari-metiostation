@@ -8,6 +8,9 @@ builder.Services.AddControllersWithViews();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddTransient<IMeasurementRepository, MeasurementRepository>();
+builder.Services.AddTransient<IChoiceRepository, ChoiceRepository>();
+
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 

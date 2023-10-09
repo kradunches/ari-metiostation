@@ -1,8 +1,11 @@
-﻿@* @model ServerMVC.Models.ChoiceModel; *@
+﻿@using ServerMVC.Models;
+@model dynamic
 
 @{
     Layout = null;
 }
+
+@Model.choices;
 
 <div class="chart-area">
     <div class="chart-area__concrete">
