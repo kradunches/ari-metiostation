@@ -5,6 +5,8 @@ html {
 }
 
 body {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 12px;
     background-color: white;
     margin-bottom: 60px;
 }
@@ -52,8 +54,25 @@ body {
 }
 
 .form {
+    font-size: 16px;
     margin-top: 20px;
     border: 5px inset lightblue;
+}
+
+.form__radio-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.form__radio {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-right: 10px;
+}
+
+.form__choice-description {
+    margin: 0 auto;
 }
 
 .table-wrapper__table {
@@ -64,7 +83,7 @@ body {
 }
 
 .table-wrapper__table th {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     padding: 5px;
     background: #efefef;
@@ -108,13 +127,43 @@ body {
 
 
 @media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
     .page__container {
+        width: 768px;
+    }
+    .main-header__fieldimg {
+        width: 768px;
+    }
+    .form__chart {
+        width: 600px;
+        height: 300px;
+    }
+    .table-wrapper__table {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .table-wrapper__table th {
+    font-size: 16px;
+    }
+
+    .table-wrapper__table td {
+    font-size: 18px;
+    }
+    .main-info__map-wrapper img {
         width: 768px;
     }
 }
 
 @media (min-width: 1200px) {
     .page__container {
+        width: 1200px;
+    }
+    .main-header__fieldimg {
+        width: 768px;
+    }
+    .main-info__map-wrapper img {
         width: 1200px;
     }
 }

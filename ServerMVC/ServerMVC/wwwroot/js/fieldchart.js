@@ -1,25 +1,6 @@
-﻿//var twind = {
-//    chart: {
-//        type: 'line'
-//    },
-//    series: [{
-//        name: 'температура',
-//        data: [{
-//            x: 'Сентябрь',
-//            y: 54
-//        }, {
-//            x: 'Октябрь',
-//            y: 66
-//        }],
-//    }],
-//    xaxis: {
-//        type: 'Даты'
-//    }
-//}
-
-$(function () {
+﻿$(function () {
     //$("#ID").click(function () {
-    $("input[type=radio][id=oneTW]").change(function () {
+    $("input[type=radio][name=TW]").change(function () {
         $.ajax({
             type: "POST",
             url: "/Home/GetTwindData",
@@ -68,6 +49,7 @@ $(function () {
         }
     });
 });
+
 
 //var chartTwind = new ApexCharts(document.querySelector(".form__chart--twind"), twind);
 //chartTwind.render();
