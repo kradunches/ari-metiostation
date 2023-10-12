@@ -16,15 +16,37 @@ namespace ServerMVC.Controllers
         }
 
         [HttpPost]
-        public List<object> GetTwindData()
+        public List<object> GetTwindData1()
         {
-            List<object> data = new List<object>();
+            List<object> temperatureChart = new List<object>();
+            ILookup<int, Measurement> lookupFirstDay = measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 05).ToUniversalTime()).ToLookup(p => p.measure_hour);
+
+            List<string> labelsOneDay = new List<string>();
+            List<decimal> valuesOneDay = new List<decimal>();
+            foreach (var i in lookupFirstDay)
+            {
+                int year = i.Select(p => p.measure_date.Year).First();
+                int month = i.Select(p => p.measure_date.Month).First();
+                int day = i.Select(p => p.measure_date.Day).First();
+                int hour = i.Select(p => p.measure_hour).First();
+                int minute = i.Select(p => p.measure_min).First();
+                DateTime outDate = new DateTime(year, month, day, hour, minute, 0);
+                string outStrDate = outDate.ToString("yyyy-MM-dd HH:mm");
+                decimal outNumVal = i.Select(p => p.t).First();
+                labelsOneDay.Add(outStrDate);
+                valuesOneDay.Add(outNumVal);
+            }
+            temperatureChart.Add(labelsOneDay); temperatureChart.Add(valuesOneDay);
+            return temperatureChart;
+        }
+        [HttpPost]
+        public List<object> GetTwindData3()
+        {
+            List<object> temperatureChart = new List<object>();
             ILookup<int, Measurement> lookupFirstDay = measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 05).ToUniversalTime()).ToLookup(p => p.measure_hour);
             ILookup<int, Measurement> lookupSecondDay = measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 06).ToUniversalTime()).ToLookup(p => p.measure_hour);
             ILookup<int, Measurement> lookupThirdDay = measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 07).ToUniversalTime()).ToLookup(p => p.measure_hour);
 
-            List<string> labelsOneDay = new List<string>();
-            List<decimal> valuesOneDay = new List<decimal>();
             List<string> labelsThreeDays = new List<string>();
             List<decimal> valuesThreeDays = new List<decimal>();
             foreach (var i in lookupFirstDay)
@@ -35,10 +57,8 @@ namespace ServerMVC.Controllers
                 int hour = i.Select(p => p.measure_hour).First();
                 int minute = i.Select(p => p.measure_min).First();
                 DateTime outDate = new DateTime(year, month, day, hour, minute, 0);
-                string outStrDate = outDate.ToString("yyyy-MM-dd:mm");
+                string outStrDate = outDate.ToString("yyyy-MM-dd HH:mm");
                 decimal outNumVal = i.Select(p => p.t).First();
-                labelsOneDay.Add(outStrDate);
-                valuesOneDay.Add(outNumVal);
                 labelsThreeDays.Add(outStrDate);
                 valuesThreeDays.Add(outNumVal);
             }
@@ -50,7 +70,7 @@ namespace ServerMVC.Controllers
                 int hour = i.Select(p => p.measure_hour).First();
                 int minute = i.Select(p => p.measure_min).First();
                 DateTime outDate = new DateTime(year, month, day, hour, minute, 0);
-                string outStrDate = outDate.ToString("yyyy-MM-dd:mm");
+                string outStrDate = outDate.ToString("yyyy-MM-dd HH:mm");
                 decimal outNumVal = i.Select(p => p.t).First();
                 labelsThreeDays.Add(outStrDate);
                 valuesThreeDays.Add(outNumVal);
@@ -63,14 +83,13 @@ namespace ServerMVC.Controllers
                 int hour = i.Select(p => p.measure_hour).First();
                 int minute = i.Select(p => p.measure_min).First();
                 DateTime outDate = new DateTime(year, month, day, hour, minute, 0);
-                string outStrDate = outDate.ToString("yyyy-MM-dd:mm");
+                string outStrDate = outDate.ToString("yyyy-MM-dd HH:mm");
                 decimal outNumVal = i.Select(p => p.t).First();
                 labelsThreeDays.Add(outStrDate);
                 valuesThreeDays.Add(outNumVal);
             }
-            data.Add(labelsOneDay); data.Add(valuesOneDay);
-            data.Add(labelsThreeDays); data.Add(valuesThreeDays);
-            return data;
+            temperatureChart.Add(labelsThreeDays); temperatureChart.Add(valuesThreeDays);
+            return temperatureChart;
         }
         public ViewResult Index()
         {
