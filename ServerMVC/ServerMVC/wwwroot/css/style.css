@@ -97,14 +97,6 @@ body {
     padding: 5px;
 }
 
-.main-info__map-wrapper {
-    margin: 20px 0px 20px 0px;
-}
-
-.main-info__map-wrapper img {
-    width: 320px;
-}
-
 .main-footer__wrapper {
     background-color: #1F9B00;
     display: flex;
@@ -151,9 +143,6 @@ body {
     .table-wrapper__table td {
     font-size: 18px;
     }
-    .main-info__map-wrapper img {
-        width: 768px;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -162,9 +151,6 @@ body {
     }
     .main-header__fieldimg {
         width: 768px;
-    }
-    .main-info__map-wrapper img {
-        width: 1200px;
     }
 }
 

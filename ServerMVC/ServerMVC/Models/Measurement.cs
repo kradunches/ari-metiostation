@@ -30,5 +30,32 @@
         /// Скорость ветра
         /// </summary>
         public decimal wind { get; set; }
+        public enum TypeOfMeasure
+        {
+            /// <summary>
+            /// Температура поверхности почвы
+            /// </summary>
+            t_pov,
+            /// <summary>
+            /// Влажность воздуха
+            /// </summary>
+            far,
+            /// <summary>
+            /// Влажность воздуха
+            /// </summary>
+            rh,
+            /// <summary>
+            /// Температура воздуха
+            /// </summary>
+            t,
+            /// <summary>
+            /// Направление ветра
+            /// </summary>
+            winddir,
+            /// <summary>
+            /// Скорость ветра
+            /// </summary>
+            wind
+        }
     }
 }

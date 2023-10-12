@@ -1,5 +1,5 @@
 ﻿@using ServerMVC.Models;
-@model dynamic
+@model IQueryable<Measurement>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
@@ -20,8 +20,11 @@
 <body class="page__body">
     <div class="page__container">
         <header class="main-header">
-            <div class="main-header__top">
-                <img src="img/calendar.png" alt="Календарь">
+            <div class="main-header__top"> 
+               @*  <form action="Home/Calculate" method="GET"> *@
+                <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-09-05">
+                <button class ="main-header__calendar-submit" type="button" id="calendar-submit">Подтвердить</button>
+                @* </form> *@
                 <img src="img/agrophysLogo.png" alt="Логотип АФИ">
                 <button id="ID">Войти</button>
             </div>
@@ -29,9 +32,6 @@
         </header>
         <main class="main-info">
             <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
-            @* @Html.Partial("Charts") *@
-            @* @Model.choices.RadioOne;
-            @Model.choices.RadioThree; *@
             <div class="chart-area">
                 <div class="chart-area__concrete">
                     <fieldset class="main-info__form form">
@@ -78,12 +78,12 @@
                                 <label class="form__choice-description" for="threeTS">3 дня</label>
                             </div>
                         </div>
-                        <div class="form__chart form__chart--tsoil"></div>
+                        <div class="form__chart form__chart--tpov"></div>
                     </fieldset>
                 </div>
                 <div class="chart-area__concrete">
                     <fieldset class="main-info__form form">
-                        <legend class="form__legend">Отобразить кол-во осадков за:</legend>
+                        <legend class="form__legend">Скорость ветра:</legend>
                         <div class="form__choice-wrapper">
                             <div class="form__radio-wrapper">
                                 <input class="form__radio" type="radio" id="onePC" name="PC" value="1" checked />
@@ -105,7 +105,7 @@
                             <tr><th>date</th><th>t_pov</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
                         </thead>
                         <tbody>
-                            @foreach (var measure in Model.measurements)
+                            @foreach (var measure in Model)
                             {
                                 <tr>
                                     <td>@measure.measure_date</td>
@@ -122,9 +122,6 @@
                 }
             </div>
             <div class="main-info">
-                <div class="main-info__map-wrapper">
-                    <img src="img/menkovomap.png" alt="Заглушка для карты">
-                </div>
             </div>
         </main>
         <footer class="main-footer">
