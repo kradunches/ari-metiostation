@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {}
+    "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {}
   },
   "projects": {
-    "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {
+    "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
+        "projectUniqueName": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
         "projectName": "ServerMVC",
-        "projectPath": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
+        "projectPath": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
         "packagesPath": "C:\\Users\\kradun\\.nuget\\packages\\",
-        "outputPath": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\obj\\",
+        "outputPath": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kradun\\AppData\\Roaming\\NuGet\\NuGet.Config",

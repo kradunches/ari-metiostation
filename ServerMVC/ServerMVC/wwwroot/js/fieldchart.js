@@ -350,13 +350,6 @@ updatePC = function () {
     }
 }
 
-$(document).ready(function () {
-    renderTW();
-    renderPW();
-    renderTpov();
-    renderPC();
-})
-
 $(function () {
     $("input[type=radio][name=TW]").change(() => updateTW());
     $("input[type=radio][name=PW]").change(() => updatePW());
@@ -365,8 +358,18 @@ $(function () {
 });
 
 var calendarButton = document.getElementById("calendar-submit");
+
+$(document).ready(function () {
+    renderTW();
+    renderPW();
+    renderTpov();
+    renderPC();
+})
+
 calendarButton.addEventListener("click", function () {
     var calendarValue = document.querySelector(".main-header__calendar").value;
-    $.post("/Home/MouldMeasurementTable", { calendarValue });
-
+    var url = "/Home/GetCalendarDate";
+    var name = calendarValue;
+    $.get(url, { input: name });
+    window.location.reload();
 });

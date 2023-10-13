@@ -149,16 +149,15 @@ namespace ServerMVC.Controllers
         [HttpPost]
         public List<object> GetWindData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, new DateTime(2023, 09, 05), 3);
 
+        public static DateTime currnetDate = new DateTime(2023, 09, 05);
+        public void GetCalendarDate(DateTime input)
+        {
+            currnetDate = input;
+        }
         public IQueryable<Measurement> GetMeasurements()
         {
-            return measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 05).ToUniversalTime());
+            return measurementRepository.Measurements.Where(p => p.measure_date == currnetDate.ToUniversalTime());
         }
         public ViewResult Index() => View(GetMeasurements());
-
-        [HttpPost]
-        public void MouldMeasurementTable(string calendarValue)
-        {
-            string tmp = calendarValue;
-        }
     }
 }
