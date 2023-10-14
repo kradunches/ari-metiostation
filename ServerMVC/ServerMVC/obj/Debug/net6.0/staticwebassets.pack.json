@@ -1,83 +1,83 @@
 {
   "Files": [
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ServerMVC.bundle.scp.css",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ServerMVC.bundle.scp.css",
       "PackagePath": "staticwebassets\\ServerMVC.bundle.scp.css"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\css\\style.css",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\css\\style.css",
       "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\favicon.ico",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\agrophysLogo.png",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\agrophysLogo.png",
       "PackagePath": "staticwebassets\\img\\agrophysLogo.png"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\calendar.png",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\calendar.png",
       "PackagePath": "staticwebassets\\img\\calendar.png"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\dayOfTheField.png",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\dayOfTheField.png",
       "PackagePath": "staticwebassets\\img\\dayOfTheField.png"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\menkovomap.png",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\img\\menkovomap.png",
       "PackagePath": "staticwebassets\\img\\menkovomap.png"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\js\\fieldchart.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\js\\fieldchart.js",
       "PackagePath": "staticwebassets\\js\\fieldchart.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

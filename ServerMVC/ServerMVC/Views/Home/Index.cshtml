@@ -1,4 +1,4 @@
-﻿@using ServerMVC.Models;
+﻿@using ServerMVC.Models
 @model IQueryable<Measurement>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -20,10 +20,13 @@
 <body class="page__body">
     <div class="page__container">
         <header class="main-header">
-            <div class="main-header__top"> 
-                <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-09-06">
-                @* <button class ="main-header__calendar-submit" type="button" id="calendar-submit">Подтвердить</button> *@
-                <input type="submit" id="calendar-submit" />
+            <div class="main-header__top">
+                @{
+                    string cd = ViewBag.viewCurrDate;
+                    var calendar = Html.TextBox("Name", cd, new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
+                }
+                @calendar
+                @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-09-06"> *@
                 <img src="img/agrophysLogo.png" alt="Логотип АФИ">
                 <button id="ID">Войти</button>
             </div>
@@ -37,7 +40,7 @@
                         <legend class="form__legend">Отобразить t воздуха за:</legend>
                         <div class="form__choice-wrapper">
                             <div class="form__radio-wrapper">
-                                <input class="form__radio" type="radio" id="oneTW" name="TW" value="1" checked/>
+                                <input class="form__radio" type="radio" id="oneTW" name="TW" value="1" checked />
                                 <label class="form__choice-description" for="oneTW">1 день</label>
                             </div>
                             <div class="form__radio-wrapper">

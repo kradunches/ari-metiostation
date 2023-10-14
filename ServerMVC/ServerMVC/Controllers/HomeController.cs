@@ -156,6 +156,7 @@ namespace ServerMVC.Controllers
         }
         public IQueryable<Measurement> GetMeasurements()
         {
+            ViewBag.viewCurrDate = currnetDate.ToString("yyyy-MM-dd");
             return measurementRepository.Measurements.Where(p => p.measure_date == currnetDate.ToUniversalTime());
         }
         public ViewResult Index() => View(GetMeasurements());

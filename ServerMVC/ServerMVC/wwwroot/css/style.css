@@ -149,8 +149,22 @@ body {
     .page__container {
         width: 1200px;
     }
+
     .main-header__fieldimg {
-        width: 768px;
+        width: 1200px;
+    }
+
+    .chart-area {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .chart-area__concrete {
+        width: 600px;
+    }
+
+    .form__chart {
+        width: 500px;
     }
 }
 

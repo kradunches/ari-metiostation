@@ -357,8 +357,6 @@ $(function () {
     $("input[type=radio][name=PC]").change(() => updatePC());
 });
 
-var calendarButton = document.getElementById("calendar-submit");
-
 $(document).ready(function () {
     renderTW();
     renderPW();
@@ -366,7 +364,9 @@ $(document).ready(function () {
     renderPC();
 })
 
-calendarButton.addEventListener("click", function () {
+var calendarButton = document.querySelector(".main-header__calendar");
+
+calendarButton.addEventListener("change", function () {
     var calendarValue = document.querySelector(".main-header__calendar").value;
     var url = "/Home/GetCalendarDate";
     var name = calendarValue;

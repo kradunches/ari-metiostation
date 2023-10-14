@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zFWz7JHefCV6DUcTiJQl7JWIhSb6lMGRroVR71EKvFlQcGSU7MEGrgDUOdE5h8MYpSHlfl5A1U9aEf0m54qTww==",
+  "dgSpecHash": "WkcrG8bfD0zKCgFpEAqwkojoX0Y6rrkpF5JjxabcdMK/9wdKzzevMkxyW18RbI1FrJHMSm4x+tss1nSCsa+fHA==",
   "success": true,
-  "projectFilePath": "D:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
+  "projectFilePath": "F:\\C#\\ari-metiostation\\ServerMVC\\ServerMVC\\ServerMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kradun\\.nuget\\packages\\blazor-apexcharts\\1.2.1\\blazor-apexcharts.1.2.1.nupkg.sha512",
     "C:\\Users\\kradun\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
