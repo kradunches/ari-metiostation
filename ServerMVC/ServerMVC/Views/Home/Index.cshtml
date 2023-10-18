@@ -22,8 +22,8 @@
         <header class="main-header">
             <div class="main-header__top">
                 @{
-                    string cd = ViewBag.viewCurrDate;
-                    var calendar = Html.TextBox("Name", cd, new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
+                    // string cd = ViewBag.viewCurrDate;
+                    var calendar = Html.TextBox("Name", null, new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
                 }
                 @calendar
                 @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-09-06"> *@

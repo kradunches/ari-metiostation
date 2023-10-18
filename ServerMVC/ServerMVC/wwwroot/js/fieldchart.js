@@ -6,7 +6,7 @@ var charWindSpeed;
 //TWwind chart
 renderTW = function () {
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/Home/GetTwindData1",
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -63,7 +63,7 @@ updateTW = function () {
         a = "/Home/GetTwindData3";
     }
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: a,
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -93,7 +93,7 @@ updateTW = function () {
 //PWind chart
 renderPW = function () {
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/Home/GetRhData1",
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -150,7 +150,7 @@ updatePW = function () {
         a = "/Home/GetRhData3";
     }
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: a,
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -180,7 +180,7 @@ updatePW = function () {
 //TPov chart
 renderTpov = function () {
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/Home/GetTpovData1",
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -236,7 +236,7 @@ updateTpov = function () {
         a = "/Home/GetTpovData3";
     }
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: a,
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -266,7 +266,7 @@ updateTpov = function () {
 //WindSpeed chart
 renderPC = function () {
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: "/Home/GetWindData1",
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -323,7 +323,7 @@ updatePC = function () {
         a = "/Home/GetWindData3";
     }
     $.ajax({
-        type: "POST",
+        type: "GET",
         url: a,
         data: '',
         contentType: "application/json; charset=utf-8",
@@ -366,10 +366,10 @@ $(document).ready(function () {
 
 var calendarButton = document.querySelector(".main-header__calendar");
 
-calendarButton.addEventListener("change", function () {
-    var calendarValue = document.querySelector(".main-header__calendar").value;
-    var url = "/Home/GetCalendarDate";
-    var name = calendarValue;
-    $.get(url, { input: name });
-    window.location.reload();
-});
+//calendarButton.addEventListener("change", function () {
+//    var calendarValue = document.querySelector(".main-header__calendar").value;
+//    var url = "/Home/Index";
+//    var val = calendarValue;
+//    $.get(url, { date: val });
+//    window.location.reload();
+//});

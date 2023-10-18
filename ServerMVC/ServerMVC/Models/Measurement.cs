@@ -3,8 +3,17 @@
     public class Measurement
     {
         public int id { get; set; }
+        /// <summary>
+        /// Год, месяц, день наблюдения
+        /// </summary>
         public DateTime measure_date {  get; set; }
+        /// <summary>
+        /// Час наблюдения
+        /// </summary>
         public int measure_hour { get; set;}
+        /// <summary>
+        /// Минута наблюдения
+        /// </summary>
         public int measure_min { get; set;}
         /// <summary>
         /// Температура поверхности почвы
@@ -37,7 +46,7 @@
             /// </summary>
             t_pov,
             /// <summary>
-            /// Влажность воздуха
+            /// Освещённость
             /// </summary>
             far,
             /// <summary>
