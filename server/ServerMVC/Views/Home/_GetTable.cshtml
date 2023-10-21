@@ -1,0 +1,25 @@
+﻿@model IQueryable<Measurement>
+
+<div class="main-info table-wrapper">
+    @{
+        <table class="table-wrapper__table">
+            <thead>
+                <tr><th>date</th><th>t_pov</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var measure in Model)
+                {
+                    <tr>
+                        <td>@measure.measure_date</td>
+                        <td>@measure.t_pov</td>
+                        <td>@measure.far</td>
+                        <td>@measure.rh</td>
+                        <td>@measure.t</td>
+                        <td>@measure.winddir</td>
+                        <td>@measure.wind</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
