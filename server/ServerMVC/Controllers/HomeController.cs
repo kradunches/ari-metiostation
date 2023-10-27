@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ServerMVC.Models;
 using System.Linq;
 
@@ -84,33 +85,18 @@ namespace ServerMVC.Controllers
         [HttpGet]
         public List<object> GetWindData1() => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, new DateTime(2023, 09, 05), 1);
         [HttpGet]
-        public List<object> GetWindData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, new DateTime(2023, 09, 05), 3);
+        public List<object> GetWindData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, new DateTime(2023, 09, 05), 3);s
 
-        //[HttpGet]
-        //public IQueryable<Measurement> GetCalendarDate()
+        //public IQueryable<Measurement> GetMeasurements()
         //{
-        //    var tmp = measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
-        //    return tmp;
+        //    return measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 05).ToUniversalTime());
         //}
-        //public IQueryable<Measurement> GetMeasurements(DateTime date = new DateTime())
-        //{
-        //    if (date == new DateTime())
-        //    {
-        //        return measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 05).ToUniversalTime());
-        //    }
-        //    else
-        //        return measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
-        //}
-        public IQueryable<Measurement> GetMeasurements()
+        [HttpGet]
+        public PartialViewResult _GetTable(DateTime date)
         {
-            return measurementRepository.Measurements.Where(p => p.measure_date == new DateTime(2023, 09, 05).ToUniversalTime());
+            var tmp = measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
+            return PartialView(tmp);
         }
-        //[HttpGet]
-        //public virtual ActionResult GetCalendarDate(DateTime date)
-        //{
-        //    var tmp = measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
-        //    return PartialView(tmp);
-        //}
-        public ViewResult Index() => View(GetMeasurements());
+        public ViewResult Index() => View();
     }
 }

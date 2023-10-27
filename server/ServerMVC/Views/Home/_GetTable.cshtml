@@ -1,7 +1,7 @@
 ﻿@model IQueryable<Measurement>
-
-<div class="main-info table-wrapper">
-    @{
+@{
+    if (Model.Count() > 1)
+    {
         <table class="table-wrapper__table">
             <thead>
                 <tr><th>date</th><th>t_pov</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
@@ -22,4 +22,9 @@
             </tbody>
         </table>
     }
-</div>
+    else
+    {
+        <h1 class="info-header">Данных за выбранную дату нет.</h1>
+    }
+}
+    
