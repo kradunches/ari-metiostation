@@ -22,8 +22,8 @@
         <header class="main-header">
             <div class="main-header__top">
                 @{
-                    // DateTime.Now.ToString("yyyy-MM-dd")
-                    var calendar = Html.TextBox("Name", "2023-09-05" , new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
+                    //DateTime.Now.ToString("yyyy-MM-dd")
+                    var calendar = Html.TextBox("Name", "2023-09-06" , new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
                 }
                 @calendar
                 @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
@@ -163,6 +163,9 @@
     <script src="js/fieldchart.js" type="text/javascript"></script>
     <script>
         $(function () {
+            var calendarButton = document.querySelector(".main-header__calendar");
+            var calendarValue = calendarButton.value;
+
             function LoadTable(dateVal) {
                 $.ajax({
                     url: '@Url.Action("_GetTable")',
@@ -177,8 +180,7 @@
                     }
                 });
             }
-            var calendarButton = document.querySelector(".main-header__calendar");
-            var calendarValue = calendarButton.value;
+
             LoadTable(calendarValue);
 
             $(".main-header__calendar").on("change", function () {
@@ -189,5 +191,4 @@
         });
     </script>
 </body>
-
 </html>

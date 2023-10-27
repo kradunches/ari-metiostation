@@ -19,11 +19,12 @@ namespace ServerMVC.Controllers
             List<string> labels = new List<string>();
             List<decimal> values = new List<decimal>();
             startDate = startDate.ToUniversalTime();
-            for (int i = 0; i < daysAmount; i++)
+            //for (int i = 0; i < daysAmount; i++)
+            for  (int i = daysAmount - 1; i >= 0; i--)
             {
                 Random rnd = new Random(DateTime.Now.Millisecond);
-                IQueryable<IGrouping<int, Measurement>> lookup = measurementRepository.Measurements.Where(p => p.measure_date == startDate.AddDays(i).ToUniversalTime()).GroupBy(p => p.measure_hour);
-                int observations = 6;
+                IQueryable<IGrouping<int, Measurement>> lookup = measurementRepository.Measurements.Where(p => p.measure_date == startDate.AddDays(-i).ToUniversalTime()).GroupBy(p => p.measure_hour);
+                int observations = 4;
                 var tmp = lookup.ToList();
                 while (tmp.Count > observations)
                 {
@@ -67,25 +68,25 @@ namespace ServerMVC.Controllers
         }
 
         [HttpGet]
-        public List<object> GetTpovData1() => IncarnateMeasurement(Measurement.TypeOfMeasure.t_pov, new DateTime(2023, 09, 05), 1);
+        public List<object> GetTpovData1(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.t_pov, date, 1);
         [HttpGet]
-        public List<object> GetTpovData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.t_pov, new DateTime(2023, 09, 05), 3);
+        public List<object> GetTpovData3(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.t_pov, date, 3);
         [HttpGet]
-        public List<object> GetFarData1() => IncarnateMeasurement(Measurement.TypeOfMeasure.far, new DateTime(2023, 09, 05), 1);
+        public List<object> GetFarData1(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.far, date, 1);
         [HttpGet]
-        public List<object> GetFarData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.far, new DateTime(2023, 09, 05), 3);
+        public List<object> GetFarData3(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.far, date, 3);
         [HttpGet]
-        public List<object> GetRhData1() => IncarnateMeasurement(Measurement.TypeOfMeasure.rh, new DateTime(2023, 09, 05), 1);
+        public List<object> GetRhData1(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.rh, date, 1);
         [HttpGet]
-        public List<object> GetRhData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.rh, new DateTime(2023, 09, 05), 3);
+        public List<object> GetRhData3(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.rh, date, 3);
         [HttpGet]
-        public List<object> GetTwindData1() => IncarnateMeasurement(Measurement.TypeOfMeasure.t, new DateTime(2023, 09, 05), 1);
+        public List<object> GetTwindData1(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.t, date, 1);
         [HttpGet]
-        public List<object> GetTwindData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.t, new DateTime(2023, 09, 05), 3);
+        public List<object> GetTwindData3(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.t, date, 3);
         [HttpGet]
-        public List<object> GetWindData1() => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, new DateTime(2023, 09, 05), 1);
+        public List<object> GetWindData1(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, date, 1);
         [HttpGet]
-        public List<object> GetWindData3() => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, new DateTime(2023, 09, 05), 3);s
+        public List<object> GetWindData3(DateTime date) => IncarnateMeasurement(Measurement.TypeOfMeasure.wind, date, 3);
 
         //public IQueryable<Measurement> GetMeasurements()
         //{

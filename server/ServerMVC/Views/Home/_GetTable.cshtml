@@ -9,8 +9,9 @@
             <tbody>
                 @foreach (var measure in Model)
                 {
+                    DateTime date = new DateTime(measure.measure_date.Year, measure.measure_date.Month, measure.measure_date.Day, measure.measure_hour, measure.measure_min, 0, 0);
                     <tr>
-                        <td>@measure.measure_date</td>
+                        <td>@date.ToString("yyyy-MM-dd HH:mm")</td>
                         <td>@measure.t_pov</td>
                         <td>@measure.far</td>
                         <td>@measure.rh</td>
