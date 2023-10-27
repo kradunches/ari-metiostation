@@ -68,7 +68,10 @@
                     }
                 },
                 xaxis: {
-                    categories: chartLables
+                    categories: chartLables,
+                    labels: {
+                        rotate: -90
+                    }
                 }
             };
 

@@ -13,7 +13,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial scale=1">
     <title>Метеостанция Меньково</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" href="favicon.ico">
 </head>
 
@@ -26,11 +26,13 @@
                     var calendar = Html.TextBox("Name", "2023-09-06" , new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
                 }
                 @calendar
+                <input type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
                 @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
-                <img src="img/agrophysLogo.png" alt="Логотип АФИ">
+                <img src="/img/agrophysLogo.png" alt="Логотип АФИ">
+                <input type="submit" onclick="location.href='@Url.Action("FieldMap", "Home")'" value="Датчики" />
                 <button id="ID">Войти</button>
             </div>
-            <img class="main-header__fieldimg" src="img/dayOfTheField.png" alt="День поля">
+            <img class="main-header__fieldimg" src="/img/dayOfTheField.png" alt="День поля">
         </header>
         <main class="main-info">
             <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
@@ -101,10 +103,7 @@
                 </div>
             </div>
 
-            @* @await Html.PartialAsync("_GetTable") *@
-            <div class="main-info table-wrapper">
-                @* @Html.Action("_GetTable"); *@
-            </div>
+            <div class="main-info table-wrapper"></div>
             
             <div class="main-info">
             </div>
@@ -114,7 +113,7 @@
             <div class="main-footer__wrapper">
                 <p class="main-footer__address">Поле Меньково blockhin@email.ru</p>
                 <p class="main-footer__about">Программа разработана в 170 отделе ФГБНУ АФИ</p>
-                <img class="main-footer__logo" src="img/agrophysLogo.png" alt="Логотип АФИ">
+                <img class="main-footer__logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
             </div>
         </footer>
 
@@ -160,7 +159,7 @@
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="_content/Blazor-ApexCharts/js/apex-charts.min.js"></script>
-    <script src="js/fieldchart.js" type="text/javascript"></script>
+    <script src="/js/indexcharts.js" type="text/javascript"></script>
     <script>
         $(function () {
             var calendarButton = document.querySelector(".main-header__calendar");

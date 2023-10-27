@@ -81,6 +81,7 @@ body {
 }
 
 .table-wrapper__table {
+    margin: 0 auto;
     box-sizing: border-box;
     margin-top: 20px;
     /*border: 5px inset lightblue;*/
@@ -100,6 +101,38 @@ body {
     text-align: center;
     border: 1px solid #dddddd;
     padding: 5px;
+}
+
+.field-map__map {
+    position: relative;
+}
+
+.field-map__sensor-button {
+    width: 12px;
+    height: 12px;
+}
+
+.sensor1 {
+    position: absolute;
+    top: 35px;
+    left: 235px;
+}
+
+.sensor2 {
+    position: absolute;
+    top: 70px;
+    left: 235px;
+}
+
+.sensor3 {
+    position: absolute;
+    top: 50px;
+    left: 195px;
+}
+
+.field-map__chart {
+    height: 300px;
+    background-color: red;
 }
 
 .main-footer__wrapper {
@@ -148,6 +181,20 @@ body {
     .table-wrapper__table td {
     font-size: 18px;
     }
+    .sensor1 {
+        top: 90px;
+        left: 585px;
+    }
+
+    .sensor2 {
+        top: 170px;
+        left: 585px;
+    }
+
+    .sensor3 {
+        top: 135px;
+        left: 495px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -170,6 +217,20 @@ body {
 
     .form__chart {
         width: 500px;
+    }
+    .sensor1 {
+        top: 130px;
+        left: 940px;
+    }
+
+    .sensor2 {
+        top: 270px;
+        left: 940px;
+    }
+
+    .sensor3 {
+        top: 205px;
+        left: 755px;
     }
 }
 

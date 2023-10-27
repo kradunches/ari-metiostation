@@ -39,7 +39,7 @@ namespace ServerMVC.Controllers
                     int hour = j.Select(p => p.measure_hour).First();
                     int minute = j.Select(p => p.measure_min).First();
                     DateTime outDate = new DateTime(year, month, day, hour, minute, 0);
-                    string outStrDate = outDate.ToString("yyyy-MM-dd HH:mm");
+                    string outStrDate = outDate.ToString("MM-dd HH:mm");
                     decimal outNumVal = 0;
                     switch (typeOfMeasure)
                     {
@@ -99,5 +99,6 @@ namespace ServerMVC.Controllers
             return PartialView(tmp);
         }
         public ViewResult Index() => View();
+        public ActionResult FieldMap() => View();
     }
 }
