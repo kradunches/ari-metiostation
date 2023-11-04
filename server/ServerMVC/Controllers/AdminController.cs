@@ -20,7 +20,7 @@ namespace ServerMVC.Controllers
         public IActionResult Index() => View(userManager.Users);
         public ViewResult Create() => View();
         [HttpPost]
-        public async Task<IActionResult> Create(CreateUserModel model)
+        public async Task<IActionResult> Create(CreateModel model)
         {
             if (ModelState.IsValid)
             {
