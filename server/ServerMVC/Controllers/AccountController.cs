@@ -1,52 +1,68 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using ServerMVC.Models;
+using ServerMVC.Infrastructure;
 
 namespace ServerMVC.Controllers
 {
-    [Authorize]
     public class AccountController : Controller
     {
-        private UserManager<AppUser> userManager;
-        private SignInManager<AppUser> signInManager;
+        private readonly IAccountService _accountService;
 
-        public AccountController(UserManager<AppUser> userMgr,
-                SignInManager<AppUser> signinMgr)
+        public AccountController(IAccountService accountService)
         {
-            userManager = userMgr;
-            signInManager = signinMgr;
+            _accountService = accountService;
         }
-        [AllowAnonymous]
-        public IActionResult Login(string returnUrl)
-        {
-            ViewBag.returnUrl = returnUrl;
-            return View();
-        }
+
+        [HttpGet]
+        public IActionResult Register() => View();
+
         [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginModel details,
-                string returnUrl)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
-                AppUser user = await userManager.FindByEmailAsync(details.Email);
-                if (user != null)
+                var response = await _accountService.Register(model);
+                if (response.StatusCode == Infrastructure.Enum.StatusCode.OK)
                 {
-                    await signInManager.SignOutAsync();
-                    Microsoft.AspNetCore.Identity.SignInResult result =
-                            await signInManager.PasswordSignInAsync(
-                                user, details.Password, false, false);
-                    if (result.Succeeded)
-                    {
-                        return Redirect(returnUrl ?? "/");
-                    }
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(response.Data));
+
+                    return RedirectToAction("Index", "Home");
                 }
-                ModelState.AddModelError(nameof(LoginModel.Email),
-                    "Invalid user or password");
+                ModelState.AddModelError("", response.Description);
             }
-            return View(details);
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Login() => View();
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var response = await _accountService.Login(model);
+                if (response.StatusCode == Infrastructure.Enum.StatusCode.OK)
+                {
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                        new ClaimsPrincipal(response.Data));
+
+                    return RedirectToAction("Index", "Home");
+                }
+                ModelState.AddModelError("", response.Description);
+            }
+            return View(model);
+        }
+
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            return RedirectToAction("Index", "Home");
         }
     }
 }
