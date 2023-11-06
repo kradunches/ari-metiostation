@@ -30,7 +30,17 @@
                 @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
                 <img src="/img/agrophysLogo.png" alt="Логотип АФИ">
                 <input type="submit" onclick="location.href='@Url.Action("FieldMap", "Home")'" value="Датчики" />
-                <button id="ID">Войти</button>
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a asp-controller="Account" asp-action="Register">Регистрация</a>
+                    <a asp-controller="Account" asp-action="Login">Войти</a>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form method="post" asp-controller="Account" asp-action="Logout">
+                        <input type="submit" value="Выход" />
+                    </form>
+                }
             </div>
             <img class="main-header__fieldimg" src="/img/dayOfTheField.png" alt="День поля">
         </header>
@@ -103,6 +113,15 @@
                 </div>
             </div>
 
+            @if (User.IsInRole("Admin"))
+            {
+                <p>Вы авторизованы как администратор</p>
+            }
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a href="#">Скачать базу данных</a>
+            }
+
             <div class="main-info table-wrapper"></div>
             
             <div class="main-info">
@@ -116,46 +135,6 @@
                 <img class="main-footer__logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
             </div>
         </footer>
-
-        <div class="login visually-hidden">
-            <div class="login__main">
-                <span class="login__main-text form-text">Почта:</span>
-                <input class="login__main-input form-input" type="text" size="40">
-                <span class="login__main-text form-text">Пароль:</span>
-                <input class="login__main-input form-input" type="text" size="40">
-                <button class="login__main-button form-button">Войти</button>
-                <button class="login__main-button form-button">Регистрация</button>
-                <a class="login__main-link form-link">Забыли пароль?</a>
-            </div>
-        </div>
-
-        <div class="registration visually-hidden">
-            <div class="registration">
-                <span class="registration__main-text form-text">Почта:</span>
-                <input class="registration__main-input form-input" type="text" size="40">
-                <span class="registration__main-text form-text">Пароль:</span>
-                <input class="registration__main-input form-input" type="text" size="40">
-                <span class="registration__main-text form-text">Введите пароль повторно:</span>
-                <input class="registration__main-input form-input" type="text" size="40">
-                <button class="registration__main-button form-button">Регистрация</button>
-            </div>
-        </div>
-
-        <div class="forgot visually-hidden">
-            <div class="forgot__main">
-                <span class="forgot__main-text form-text">Пожалуйста, введите почту, которую Вы указывал при регистрации, на неё придет новый пароль</span>
-                <span class="forgot__main-text form-text">Почта:</span>
-                <input class="forgot__main-input form-input" type="text" size="40">
-                <button class="forgot__main-button form-button">Отправить письмо с новым паролем</button>
-            </div>
-        </div>
-
-        <div class="success visually-hidden">
-            <div class="success__main">
-                <span class="success__main-text form-text">Письмо успешно отправлено</span>
-                <button class="success__main-button form-button">Закрыть</button>
-            </div>
-        </div>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="_content/Blazor-ApexCharts/js/apex-charts.min.js"></script>

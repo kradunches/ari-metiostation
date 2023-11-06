@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ServerMVC.Models
+namespace ServerMVC.Models.Repository
 {
     public class MeasurementRepository : IMeasurementRepository
     {

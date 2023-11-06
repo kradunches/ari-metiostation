@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ServerMVC.Models;
+using ServerMVC.Models.Repository;
 using System.Linq;
 
 namespace ServerMVC.Controllers

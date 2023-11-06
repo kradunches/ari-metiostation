@@ -1,5 +1,6 @@
 ﻿using System.Linq;
-namespace ServerMVC.Models
+
+namespace ServerMVC.Models.Repository
 {
     public interface IMeasurementRepository
     {
