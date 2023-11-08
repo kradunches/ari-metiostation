@@ -8,10 +8,10 @@ namespace ServerMVC.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IMeasurementRepository measurementRepository;
+        private readonly IMeasurementRepository _measurementRepository;
         public HomeController(IMeasurementRepository measRepo)
         {
-            this.measurementRepository = measRepo;
+            this._measurementRepository = measRepo;
         }
 
         public List<object> IncarnateMeasurement(Measurement.TypeOfMeasure typeOfMeasure, DateTime startDate, int daysAmount)
@@ -23,15 +23,15 @@ namespace ServerMVC.Controllers
             //for (int i = 0; i < daysAmount; i++)
             for  (int i = daysAmount - 1; i >= 0; i--)
             {
-                Random rnd = new Random(DateTime.Now.Millisecond);
-                IQueryable<IGrouping<int, Measurement>> lookup = measurementRepository.Measurements.Where(p => p.measure_date == startDate.AddDays(-i).ToUniversalTime()).GroupBy(p => p.measure_hour);
-                int observations = 4;
+                //Random rnd = new Random(DateTime.Now.Millisecond);
+                IQueryable<IGrouping<int, Measurement>> lookup = _measurementRepository.Measurements.Where(p => p.measure_date == startDate.AddDays(-i).ToUniversalTime()).GroupBy(p => p.measure_hour);
+                //int observations = 4;
                 var tmp = lookup.ToList();
-                while (tmp.Count > observations)
-                {
-                    int rndVal = rnd.Next(0, tmp.Count());
-                    tmp.RemoveAt(rndVal);
-                }
+                //while (tmp.Count > observations)
+                //{
+                //    int rndVal = rnd.Next(0, tmp.Count());
+                //    tmp.RemoveAt(rndVal);
+                //}
                 foreach (var j in tmp)
                 {
                     int year = j.Select(p => p.measure_date.Year).First();
@@ -96,10 +96,9 @@ namespace ServerMVC.Controllers
         [HttpGet]
         public PartialViewResult _GetTable(DateTime date)
         {
-            var tmp = measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
+            var tmp = _measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
             return PartialView(tmp);
         }
         public ViewResult Index() => View();
-        public ActionResult FieldMap() => View();
     }
 }

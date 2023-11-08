@@ -8,12 +8,13 @@ namespace ServerMVC.Models
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { Database.EnsureCreated(); }
         public DbSet<Measurement> Measurement { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<User> User { get; set; }
+        public DbSet<Moistmeter> Moistmeter { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(builder =>
             {
-                builder.ToTable("Users").HasKey(x => x.Id);
+                builder.ToTable("User").HasKey(x => x.Id);
 
                 builder.HasData(new User[]
                 {

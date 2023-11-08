@@ -12,6 +12,7 @@ builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 builder.Services.AddTransient<IMeasurementRepository, MeasurementRepository>();
+builder.Services.AddTransient<IMoistmeterRepository, MoistmeterRepository>();
 builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddTransient<IBaseRepository<User>, UserRepository>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>{

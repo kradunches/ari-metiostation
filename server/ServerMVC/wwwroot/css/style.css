@@ -131,8 +131,9 @@ body {
 }
 
 .field-map__chart {
-    height: 300px;
-    background-color: red;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
 }
 
 .main-footer__wrapper {

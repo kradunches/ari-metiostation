@@ -1,0 +1,111 @@
+﻿@model IQueryable<Moistmeter>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial scale=1">
+    <title>Метеостанция Меньково</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+    <div class="page__container">
+        <header class="main-header">
+            <div class="main-header__top">
+                @{
+                    //DateTime.Now.ToString("yyyy-MM-dd")
+                    var calendar = Html.TextBox("Name", "2023-09-06", new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
+                }
+                @calendar
+                <input type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
+                @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
+                <img src="/img/agrophysLogo.png" alt="Логотип АФИ">
+                <input type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
+                @if (!User.Identity.IsAuthenticated)
+                {
+                    <a asp-controller="Account" asp-action="Register">Регистрация</a>
+                    <a asp-controller="Account" asp-action="Login">Войти</a>
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form method="post" asp-controller="Account" asp-action="Logout">
+                        <input type="submit" value="Выход" />
+                    </form>
+                }
+            </div>
+            <img class="main-header__fieldimg" src="/img/dayOfTheField.png" alt="День поля">
+        </header>
+        <main class="main-info field-map">
+            <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
+            <div class="field-map__map">
+                <img class="main-header__fieldimg" src="/img/fieldmap.png" alt="День поля">
+                <button class="field-map__sensor-button sensor1" value="First"></button>
+                <button class="field-map__sensor-button sensor2" value="Second"></button>
+                <button class="field-map__sensor-button sensor3" value="Third"></button>
+                
+                <div class="main-info table-wrapper"></div>
+
+            </div>
+            
+            <div class="field-map__chart">
+                <div class="field-map__chart-sensor1"></div>
+                <div class="field-map__chart-sensor2"></div>
+                <div class="field-map__chart-sensor3"></div>
+                <div class="field-map__chart-sensor4"></div>
+                <div class="field-map__chart-sensor5"></div>
+            </div>
+
+        </main>
+        <footer class="main-footer">
+            <h1 class="visually-hidden">Контакты</h1>
+            <div class="main-footer__wrapper">
+                <p class="main-footer__address">Поле Меньково blockhin@email.ru</p>
+                <p class="main-footer__about">Программа разработана в 170 отделе ФГБНУ АФИ</p>
+                <img class="main-footer__logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
+            </div>
+        </footer>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="_content/Blazor-ApexCharts/js/apex-charts.min.js"></script>
+    <script src="/js/fieldmapchart.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            var calendarButton = document.querySelector(".main-header__calendar");
+            var calendarValue = calendarButton.value;
+
+            function LoadTable(dateVal, sensorVal) {
+                $.ajax({
+                    url: '@Url.Action("_GetMoistmeterTable")',
+                    dataType: 'html',
+                    contentType: 'application/html; charset=utf-8',
+                    type: 'GET',
+                    data: {
+                        date: dateVal,
+                        sensorName: sensorVal
+                    },
+                    success: function (data) {
+                        $('.table-wrapper').html(data);
+                    }
+                });
+            }
+
+            LoadTable(calendarValue);
+
+            $(".main-header__calendar").on("change", function () {
+                calendarValue = calendarButton.value;
+                LoadTable(calendarValue);
+            });
+
+            $(".field-map__sensor-button").on("click", function () {
+                LoadTable(calendarValue, this.value);
+            });
+            
+        });
+    </script>
+</body>
+</html>

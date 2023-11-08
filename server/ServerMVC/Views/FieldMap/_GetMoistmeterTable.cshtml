@@ -1,0 +1,31 @@
+﻿@model IQueryable<Moistmeter>
+
+@{
+    if (Model.Count() > 1)
+    {
+        <table class="table-wrapper__table">
+            <thead>
+                <tr><th>date</th><th>chan1</th><th>chan2</th><th>chan3</th><th>chan4</th><th>chan5</th><th>name</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var measure in Model)
+                {
+                    DateTime date = new DateTime(measure.measure_date.Year, measure.measure_date.Month, measure.measure_date.Day, measure.measure_hour, 0, 0);
+                    <tr>
+                        <td>@date.ToString("yyyy-MM-dd HH:mm")</td>
+                        <td>@measure.channel1</td>
+                        <td>@measure.channel2</td>
+                        <td>@measure.channel3</td>
+                        <td>@measure.channel4</td>
+                        <td>@measure.channel5</td>
+                        <td>@measure.name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h1 class="info-header">Данных за выбранную дату нет.</h1>
+    }
+}

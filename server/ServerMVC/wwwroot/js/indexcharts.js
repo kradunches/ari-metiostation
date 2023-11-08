@@ -42,7 +42,7 @@
             error: OnError
         });
         function OnSuccessResult(temperatureChart) {
-            var chartLables = temperatureChart[0];
+            var chartLabels = temperatureChart[0];
             var chartData = temperatureChart[1];
             var chartMatter = {
                 chart: {
@@ -68,9 +68,9 @@
                     }
                 },
                 xaxis: {
-                    categories: chartLables,
+                    categories: chartLabels,
                     labels: {
-                        rotate: -90
+                        rotate: 0
                     }
                 }
             };
@@ -145,11 +145,11 @@
             error: OnError
         });
         function OnSuccessResult(temperatureChart) {
-            var chartLables = temperatureChart[0];
+            var chartLabels = temperatureChart[0];
             var chartData = temperatureChart[1];
             chart.updateOptions({
                 xaxis: {
-                    categories: chartLables
+                    categories: chartLabels
                 },
                 series: [
                     {
