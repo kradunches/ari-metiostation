@@ -13,7 +13,7 @@ namespace ServerMVC.Controllers
         {
             _moistmeterRepository = moistRepo;
         }
-        public List<object> IncarnateMoistMeasurement(DateTime startDate)
+        public List<object> IncarnateMoistMeasurement(DateTime startDate, string sensorName)
         {
             List<object> temperatureChart = new List<object>();
             List<string> labels = new List<string>();
@@ -22,8 +22,12 @@ namespace ServerMVC.Controllers
             List<decimal> valuesChan3 = new List<decimal>();
             List<decimal> valuesChan4 = new List<decimal>();
             List<decimal> valuesChan5 = new List<decimal>();
+            IQueryable<IGrouping<int, Moistmeter>> lookup;
             startDate = startDate.ToUniversalTime();
-            IQueryable<IGrouping<int, Moistmeter>> lookup = _moistmeterRepository.Moistmeters.Where(p => p.measure_date == startDate).GroupBy(p => p.measure_hour);
+            if (sensorName != null)
+                lookup = _moistmeterRepository.Moistmeters.Where(p => p.measure_date == startDate && p.name == sensorName).GroupBy(p => p.measure_hour);
+            else
+                lookup = _moistmeterRepository.Moistmeters.Where(p => p.measure_date == startDate).GroupBy(p => p.measure_hour);
             var tmp = lookup.ToList();
             foreach (var j in tmp)
             {
@@ -56,8 +60,7 @@ namespace ServerMVC.Controllers
         [HttpGet]
         public List<object> GetData(DateTime date, string sensorName)
         {
-
-            return IncarnateMoistMeasurement(date.ToUniversalTime());
+            return IncarnateMoistMeasurement(date.ToUniversalTime(), sensorName);
         }
         [HttpGet]
         public PartialViewResult _GetMoistmeterTable(DateTime date, string sensorName)

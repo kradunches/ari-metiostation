@@ -52,13 +52,7 @@
 
             </div>
             
-            <div class="field-map__chart">
-                <div class="field-map__chart-sensor1"></div>
-                <div class="field-map__chart-sensor2"></div>
-                <div class="field-map__chart-sensor3"></div>
-                <div class="field-map__chart-sensor4"></div>
-                <div class="field-map__chart-sensor5"></div>
-            </div>
+            <div class="field-map__chart"></div>
 
         </main>
         <footer class="main-footer">
@@ -78,7 +72,7 @@
             var calendarButton = document.querySelector(".main-header__calendar");
             var calendarValue = calendarButton.value;
 
-            function LoadTable(dateVal, sensorVal) {
+            function LoadTable(dateVal, sensorName) {
                 $.ajax({
                     url: '@Url.Action("_GetMoistmeterTable")',
                     dataType: 'html',
@@ -86,7 +80,7 @@
                     type: 'GET',
                     data: {
                         date: dateVal,
-                        sensorName: sensorVal
+                        sensorName: sensorName
                     },
                     success: function (data) {
                         $('.table-wrapper').html(data);
