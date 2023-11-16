@@ -10,17 +10,14 @@ namespace ServerMVC.Infrastructure
 {
     public class AccountService : IAccountService
     {
-        //private readonly IBaseRepository<Profile> _proFileRepository;
         private readonly IBaseRepository<User> _userRepository;
         private readonly ILogger<AccountService> _logger;
 
         public AccountService(IBaseRepository<User> userRepository,
-            //ILogger<AccountService> logger, IBaseRepository<Profile> proFileRepository)
             ILogger<AccountService> logger)
         {
             _userRepository = userRepository;
             _logger = logger;
-            //_proFileRepository = proFileRepository;
         }
 
         public async Task<BaseResponse<ClaimsIdentity>> Register(RegisterViewModel model)

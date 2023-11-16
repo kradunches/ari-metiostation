@@ -22,10 +22,10 @@
                     var calendar = Html.TextBox("Name", "2023-09-06", new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
                 }
                 @calendar
-                <input type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
+                <input class="main-header__button" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
                 @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
                 <img src="/img/agrophysLogo.png" alt="Логотип АФИ">
-                <input type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
+                <input class="main-header__button" type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
                 @if (!User.Identity.IsAuthenticated)
                 {
                     <a asp-controller="Account" asp-action="Register">Регистрация</a>
@@ -48,11 +48,10 @@
                 <button class="field-map__sensor-button sensor2" value="Second"></button>
                 <button class="field-map__sensor-button sensor3" value="Third"></button>
                 
+                <div class="form__chart field-map__chart"></div>
                 <div class="main-info table-wrapper"></div>
 
             </div>
-            
-            <div class="field-map__chart"></div>
 
         </main>
         <footer class="main-footer">

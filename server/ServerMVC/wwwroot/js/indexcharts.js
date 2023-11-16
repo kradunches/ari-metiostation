@@ -70,7 +70,7 @@
                 xaxis: {
                     categories: chartLabels,
                     labels: {
-                        rotate: 0
+                        rotate: -45
                     }
                 }
             };

@@ -27,6 +27,7 @@ body {
     width: 320px;
     background: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+    box-sizing: border-box;
 }
 
 .info-header {
@@ -35,9 +36,37 @@ body {
 }
 
 .main-header__top {
+    padding: 5px;
+    z-index: 1;
+    top: 0;
+    /*position: fixed;*/
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: #1F9B00;
+    width: 100%;
+}
+
+.main-header__calendar {
+    color: green;
+    font-weight: bold;
+    border: 1px solid DarkGreen;
+}
+
+.main-header__button {
+    color: white;
+    background-color: green;
+    border: 1px solid DarkGreen;
+    font-weight: bold;
+}
+
+.main-header__button:hover {
+    background-color: #20AB00;
+}
+
+.main-header__button:active {
+    border: 2px solid DarkGreen;
+    margin: -1px;
 }
 
 .form__chart {
@@ -84,8 +113,6 @@ body {
     margin: 0 auto;
     box-sizing: border-box;
     margin-top: 20px;
-    /*border: 5px inset lightblue;*/
-    border: 0px;
 }
 
 .table-wrapper__table th {
@@ -131,14 +158,16 @@ body {
 }
 
 .field-map__chart {
-    margin: 30px 0;
+    margin: 0 auto;
     height: 100px;
 }
 
 .main-footer__wrapper {
+    color: white;
     background-color: #1F9B00;
     display: flex;
     justify-content: space-between;
+    padding: 0 3px;
 }
 
 .main-footer__address {

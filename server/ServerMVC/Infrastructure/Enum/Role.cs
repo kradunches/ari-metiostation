@@ -6,9 +6,7 @@ namespace ServerMVC.Infrastructure.Enum
     {
         [Display(Name = "Пользователь")]
         User = 0,
-        [Display(Name = "Модератор")]
-        Moderator = 1,
         [Display(Name = "Админ")]
-        Admin = 2,
+        Admin = 1,
     }
 }

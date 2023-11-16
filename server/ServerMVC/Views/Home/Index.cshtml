@@ -26,10 +26,10 @@
                     var calendar = Html.TextBox("Name", "2023-09-06" , new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
                 }
                 @calendar
-                <input type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
+                <input class="main-header__button" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
                 @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
                 <img src="/img/agrophysLogo.png" alt="Логотип АФИ">
-                <input type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
+                <input class="main-header__button" type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
                 @if (!User.Identity.IsAuthenticated)
                 {
                     <a asp-controller="Account" asp-action="Register">Регистрация</a>
@@ -50,10 +50,7 @@
             {
                 <p>Вы авторизованы как администратор</p>
             }
-            @if (User.Identity.IsAuthenticated)
-            {
-                <a href="#">Скачать базу данных</a>
-            }
+            
             <div class="chart-area">
                 <div class="chart-area__concrete">
                     <fieldset class="main-info__form form">
@@ -120,6 +117,11 @@
                     </fieldset>
                 </div>
             </div>
+
+            @if (User.Identity.IsAuthenticated)
+            {
+                <button class="main-header__button" href="#">Скачать базу данных</button>
+            }
 
             <div class="main-info table-wrapper"></div>
             

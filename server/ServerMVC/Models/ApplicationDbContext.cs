@@ -24,13 +24,6 @@ namespace ServerMVC.Models
                         Name = "Admin",
                         Password = HashPassword.HashPassowrd("123456"),
                         Role = Role.Admin
-                    },
-                    new User()
-                    {
-                        Id = 2,
-                        Name = "Moderator",
-                        Password = HashPassword.HashPassowrd("654321"),
-                        Role = Role.Moderator
                     }
                 });
                 builder.Property(x => x.Id).ValueGeneratedOnAdd();
