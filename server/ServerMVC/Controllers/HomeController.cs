@@ -100,5 +100,7 @@ namespace ServerMVC.Controllers
             return PartialView(tmp);
         }
         public ViewResult Index() => View();
+        public ActionResult Header() => PartialView("_Header");
+        public ActionResult Footer() => PartialView("_Footer");
     }
 }

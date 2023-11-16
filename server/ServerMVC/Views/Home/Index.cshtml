@@ -20,29 +20,7 @@
 <body class="page__body">
     <div class="page__container">
         <header class="main-header">
-            <div class="main-header__top">
-                @{
-                    //DateTime.Now.ToString("yyyy-MM-dd")
-                    var calendar = Html.TextBox("Name", "2023-09-06" , new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
-                }
-                @calendar
-                <input class="main-header__button" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
-                @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
-                <img src="/img/agrophysLogo.png" alt="Логотип АФИ">
-                <input class="main-header__button" type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
-                @if (!User.Identity.IsAuthenticated)
-                {
-                    <a asp-controller="Account" asp-action="Register">Регистрация</a>
-                    <a asp-controller="Account" asp-action="Login">Войти</a>
-                }
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <form method="post" asp-controller="Account" asp-action="Logout">
-                        <input type="submit" value="Выход" />
-                    </form>
-                }
-            </div>
-            <img class="main-header__fieldimg" src="/img/dayOfTheField.png" alt="День поля">
+            @await Html.PartialAsync("_Header")
         </header>
         <main class="main-info">
             <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
@@ -120,7 +98,7 @@
 
             @if (User.Identity.IsAuthenticated)
             {
-                <button class="main-header__button" href="#">Скачать базу данных</button>
+                <button class="sample-button" href="#">Скачать базу данных</button>
             }
 
             <div class="main-info table-wrapper"></div>
@@ -129,12 +107,7 @@
             </div>
         </main>
         <footer class="main-footer">
-            <h1 class="visually-hidden">Контакты</h1>
-            <div class="main-footer__wrapper">
-                <p class="main-footer__address">Поле Меньково blockhin@email.ru</p>
-                <p class="main-footer__about">Программа разработана в 170 отделе ФГБНУ АФИ</p>
-                <img class="main-footer__logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
-            </div>
+            @await Html.PartialAsync("_Footer")
         </footer>
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

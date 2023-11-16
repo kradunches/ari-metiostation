@@ -36,37 +36,61 @@ body {
 }
 
 .main-header__top {
-    padding: 5px;
-    z-index: 1;
+    z-index: 1000;
     top: 0;
-    /*position: fixed;*/
+    position: fixed;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #1F9B00;
-    width: 100%;
+    width: 320px;
+    line-height: 46px;
 }
 
 .main-header__calendar {
+    margin: 5px;
     color: green;
     font-weight: bold;
     border: 1px solid DarkGreen;
 }
 
-.main-header__button {
+.main-header__calendar:hover {
+    background-color: AliceBlue;
+}
+
+.main-header__auth {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.sample-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 0;
     color: white;
     background-color: green;
     border: 1px solid DarkGreen;
     font-weight: bold;
+    width: 85px;
+    height: 46px;
+    cursor: pointer;
 }
 
-.main-header__button:hover {
+.sample-button:hover {
     background-color: #20AB00;
 }
 
-.main-header__button:active {
+.sample-button:active {
     border: 2px solid DarkGreen;
-    margin: -1px;
+    /*margin: -1px;*/
+}
+
+.main-header__auth:active {
+    width: 83px;
+    height: 44px;
 }
 
 .form__chart {
@@ -180,8 +204,10 @@ body {
     width: 155px;
 }
 
-.main-footer__logo {
-    margin: auto 0;
+.ari-logo {
+    width: 68px;
+    height: 58px;
+    margin: 0;
 }
 
 
@@ -190,6 +216,9 @@ body {
         font-size: 16px;
     }
     .page__container {
+        width: 768px;
+    }
+    .main-header__top {
         width: 768px;
     }
     .main-header__fieldimg {
@@ -230,7 +259,9 @@ body {
     .page__container {
         width: 1200px;
     }
-
+    .main-header__top {
+        width: 1200px;
+    }
     .main-header__fieldimg {
         width: 1200px;
     }
