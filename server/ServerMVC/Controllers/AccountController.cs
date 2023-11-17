@@ -38,7 +38,11 @@ namespace ServerMVC.Controllers
         }
 
         [HttpGet]
-        public IActionResult Login() => View();
+        public IActionResult Login() 
+        {
+            ViewBag.Title = "Login";
+            return View(); 
+        }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel model)

@@ -69,7 +69,11 @@ namespace ServerMVC.Controllers
                 return PartialView(_moistmeterRepository.Moistmeters.Where(p => p.measure_date == date.ToUniversalTime() && p.name == sensorName));
             return PartialView(_moistmeterRepository.Moistmeters.Where(p => p.measure_date == date.ToUniversalTime()));
         }
-        public ViewResult Index() => View();
+        public ViewResult Index() 
+        {
+            ViewBag.Title = "Датчики"; 
+            return View(); 
+        }
         public ActionResult Header() => PartialView("_Header");
         public ActionResult Footer() => PartialView("_Footer");
     }

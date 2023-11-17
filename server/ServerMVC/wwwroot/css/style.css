@@ -8,7 +8,7 @@ body {
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 12px;
     background-color: white;
-    margin-bottom: 60px;
+    /*margin-bottom: 60px;*/
 }
 
 .visually-hidden {
@@ -210,6 +210,69 @@ body {
     margin: 0;
 }
 
+.auth-page__container {
+    margin: 0 auto;
+    width: 320px;
+}
+
+.auth-page__header {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.auth-title__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-form {
+    border: 1px solid DarkGray;
+    background-color: WhiteSmoke;
+}
+
+.auth-form__inland-wrapper {
+    padding: 20px 0;
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-input {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.auth-button {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    height: 30px;
+    display: inline-block;
+    color: white;
+    background-color: green;
+    border: 1px solid DarkGreen;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background-color: #20AB00;
+}
+
+.auth-button:active {
+    border: 2px solid DarkGreen;
+    /*margin: -1px;*/
+}
+
+.auth-link {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
 
 @media (min-width: 768px) {
     html {

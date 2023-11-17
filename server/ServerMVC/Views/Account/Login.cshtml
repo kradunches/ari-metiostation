@@ -4,18 +4,21 @@
     Layout = "_Layout";
 }
 
-<h3 class="">Вход в аккаунт</h3>
-<form autocomplete="on" method="post" asp-controller="Account" asp-action="Login">
-    <div asp-validation-summary="All" class=""></div>
-    <div class="form-group">
-        <input asp-for="Name" placeholder="Логин" class="form-control textbox-dg font-weight-bold textcenter"type="text">
-        @* <div class="form-text">Длина логина должна быть от 3 до 20 символов.</div> *@
+<div class="auth-page__container">
+    <div class="auth-title__wrapper">
+        <a asp-controller="Home" asp-action="Index">
+            <img class="ari-logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
+        </a>
+        <h3 class="auth-page__header">Вход в аккаунт</h3>
     </div>
-    <div class="form-group">
-        <input autocomplete="new-password" asp-for="Password" placeholder="Пароль" class="form-controltextbox-dg fontweight-bold ext-center" type="password">
-    </div>
-    <div class="d-grid gap-2 d-md-block float-right">
-        <a asp-controller="Account" asp-action="Register" class="btn btn-primary"type="button">Регистрация</a>
-        <button class="btn btn-success">Отправить</button>
-    </div>
-</form>
+    <form class="auth-form" autocomplete="on" method="post" asp-controller="Account" asp-action="Login">
+        <div class="auth-form__inland-wrapper" asp-validation-summary="All">
+            <input asp-for="Name" placeholder="Логин" class="auth-input" type="text">
+            @* <div class="form-text">Длина логина должна быть от 3 до 20 символов.</div> *@
+            <input autocomplete="new-password" asp-for="Password" placeholder="Пароль" class="auth-input" type="password">
+            <button class="auth-button">Войти</button>
+            <a asp-controller="Account" asp-action="Register" class="auth-link">Регистрация</a>
+        </div>
+    </form>
+</div>
+

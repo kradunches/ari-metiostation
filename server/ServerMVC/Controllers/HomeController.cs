@@ -99,7 +99,11 @@ namespace ServerMVC.Controllers
             var tmp = _measurementRepository.Measurements.Where(p => p.measure_date == date.ToUniversalTime());
             return PartialView(tmp);
         }
-        public ViewResult Index() => View();
+        public ViewResult Index() 
+        {
+            ViewBag.Title = "Метеостанция Меньково";
+            return View(); 
+        }
         public ActionResult Header() => PartialView("_Header");
         public ActionResult Footer() => PartialView("_Footer");
     }
