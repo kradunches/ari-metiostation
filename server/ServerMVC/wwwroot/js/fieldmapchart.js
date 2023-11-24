@@ -54,7 +54,7 @@
                         }
                     },
                 },
-                colors: ['#008FFB', '#00E396', '#CED4DC', 'yellow', 'gray'],
+                colors: ['#008FFB', '#00E396', '#CED4DC', 'yellow', 'MidnightBlue'],
                 dataLabels: {
                     enabled: false
                 },

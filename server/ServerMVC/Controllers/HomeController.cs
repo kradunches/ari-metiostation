@@ -19,19 +19,13 @@ namespace ServerMVC.Controllers
             List<object> temperatureChart = new List<object>();
             List<string> labels = new List<string>();
             List<decimal> values = new List<decimal>();
+            List<double> winddirValues = new List<double>();
             startDate = startDate.ToUniversalTime();
             //for (int i = 0; i < daysAmount; i++)
             for  (int i = daysAmount - 1; i >= 0; i--)
             {
-                //Random rnd = new Random(DateTime.Now.Millisecond);
                 IQueryable<IGrouping<int, Measurement>> lookup = _measurementRepository.Measurements.Where(p => p.measure_date == startDate.AddDays(-i).ToUniversalTime()).GroupBy(p => p.measure_hour);
-                //int observations = 4;
                 var tmp = lookup.ToList();
-                //while (tmp.Count > observations)
-                //{
-                //    int rndVal = rnd.Next(0, tmp.Count());
-                //    tmp.RemoveAt(rndVal);
-                //}
                 foreach (var j in tmp)
                 {
                     int year = j.Select(p => p.measure_date.Year).First();
@@ -57,6 +51,8 @@ namespace ServerMVC.Controllers
                             outNumVal = j.Select(p => p.t).First();
                             break;
                         case Measurement.TypeOfMeasure.wind:
+                            decimal winddir = j.Select(p => p.winddir).First();
+                            winddirValues.Add(Math.Round(Math.Sin((double)winddir / 1200 * 360 / 180 * Math.PI) * 400, 2));
                             outNumVal = j.Select(p => p.wind).First();
                             break;
                     }
@@ -65,6 +61,8 @@ namespace ServerMVC.Controllers
                 }
             }
             temperatureChart.Add(labels); temperatureChart.Add(values);
+            if (typeOfMeasure == Measurement.TypeOfMeasure.wind)
+                temperatureChart.Add(winddirValues);
             return temperatureChart;
         }
 

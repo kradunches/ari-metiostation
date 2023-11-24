@@ -2,7 +2,7 @@
 @{
     if (Model.Count() > 1)
     {
-        <table class="table-wrapper__table">
+        <table>
             <thead>
                 <tr><th>date</th><th>t_pov</th><th>far</th><th>rh</th><th>t</th><th>winddir</th><th>wind</th></tr>
             </thead>
@@ -10,13 +10,14 @@
                 @foreach (var measure in Model)
                 {
                     DateTime date = new DateTime(measure.measure_date.Year, measure.measure_date.Month, measure.measure_date.Day, measure.measure_hour, measure.measure_min, 0, 0);
+                    decimal winddir = @measure.winddir/1200*360;
                     <tr>
                         <td>@date.ToString("yyyy-MM-dd HH:mm")</td>
                         <td>@measure.t_pov</td>
                         <td>@measure.far</td>
                         <td>@measure.rh</td>
                         <td>@measure.t</td>
-                        <td>@measure.winddir</td>
+                        <td>@Math.Round(winddir, 1)</td>
                         <td>@measure.wind</td>
                     </tr>
                 }

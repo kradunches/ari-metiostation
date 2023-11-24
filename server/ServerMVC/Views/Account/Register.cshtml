@@ -4,19 +4,21 @@
     Layout = "_Layout";
 }
 
-<h3 class="">Регистрация</h3>
-<form asp-controller="Account" asp-action="Register">
-    <div asp-validation-summary="All" class="text-dangertext-center"></div>
-    <div class="form-group">
-        <input asp-for="Name" class="form-control textbox-dg font-weight-bold text-center"placeholder="Имя" type="text">
+<div class="auth-page__container">
+    <div class="auth-title__wrapper">
+        <a asp-controller="Home" asp-action="Index">
+            <img class="ari-logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
+        </a>
+        <h3 class="auth-page__header">Регистрация</h3>
     </div>
-    <div class="form-group">
-        <input autocomplete="new-password" asp-for="Password" placeholder="Пароль" class="form-controltextbox-dg fontweight-bold text-center" type="password">
-    </div>
-    @* <span class="text-black" style="font-size: small; font-family:'Comic Sans MS'">Пароль должен бытьдлиной больше 6символов и иметь только латинские символы</span> *@
-    <div class="form-group">
-        <input autocomplete="new-password" asp-for="PasswordConfirm" placeholder="Подтвердите пароль"class="form-controltextbox-dg font-weight-bold text-center" type="password">
-    </div>
-    <a asp-controller="Account" asp-action="Login" class="btn btn-primary" type="button">Вход</a>
-    <button class="btn btn-success btn-lg float-right" type="submit">Зарегестрироваться</button>
-</form>
+    <form class="auth-form" asp-controller="Account" asp-action="Register">
+        <div class="auth-form__inland-wrapper" asp-validation-summary="All">
+            <input class="auth-input" asp-for="Name" placeholder="Имя" type="text">
+            <input class="auth-input" autocomplete="new-password" asp-for="Password" placeholder="Пароль" type="password">
+            @* <span>Пароль должен бытьдлиной больше 6символов  и   иметь только латинские символы</span> *@
+            <input class="auth-input" autocomplete="new-password" asp-for="PasswordConfirm" placeholder="Подтвердите пароль" type="password">
+            <button class="auth-button" type="submit">Зарегестрироваться</button>
+            <a class="auth-link" asp-controller="Account" asp-action="Login" type="button">Вход</a>
+        </div>
+    </form>
+</div>

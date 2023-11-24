@@ -36,7 +36,7 @@ body {
 }
 
 .main-header__top {
-    z-index: 1000;
+    z-index: 100;
     top: 0;
     position: fixed;
     display: flex;
@@ -44,26 +44,20 @@ body {
     justify-content: space-between;
     background-color: #1F9B00;
     width: 320px;
-    line-height: 46px;
+    /*line-height: 46px;*/
 }
 
 .main-header__calendar {
     margin: 5px;
+    width: 97px;
     color: green;
     font-weight: bold;
     border: 1px solid DarkGreen;
+    cursor: pointer;
 }
 
 .main-header__calendar:hover {
     background-color: AliceBlue;
-}
-
-.main-header__auth {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    text-decoration: none;
-    text-align: center;
 }
 
 .sample-button {
@@ -74,7 +68,7 @@ body {
     background-color: green;
     border: 1px solid DarkGreen;
     font-weight: bold;
-    width: 85px;
+    width: 100px;
     height: 46px;
     cursor: pointer;
 }
@@ -88,9 +82,20 @@ body {
     /*margin: -1px;*/
 }
 
-.main-header__auth:active {
-    width: 83px;
-    height: 44px;
+.main-header__user-greeteng {
+    margin: 5px;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 46px;
+    font-weight: bold;
+}
+
+.main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form__chart {
@@ -133,22 +138,26 @@ body {
     margin: 0 auto;
 }
 
-.table-wrapper__table {
+.download-data-button {
+    width: 200px;
     margin: 0 auto;
-    box-sizing: border-box;
     margin-top: 20px;
 }
 
-.table-wrapper__table th {
-    font-size: 10px;
+.table-wrapper {
+    margin: 30px 0;
+}
+
+.table-wrapper th {
+    font-size: 24px;
     font-weight: bold;
     padding: 5px;
     background: #efefef;
     border: 1px solid #dddddd;
 }
 
-.table-wrapper__table td {
-    font-size: 12px;
+.table-wrapper td {
+    font-size: 22px;
     text-align: center;
     border: 1px solid #dddddd;
     padding: 5px;
@@ -192,11 +201,12 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 0 3px;
+    height: 58px;
 }
 
 .main-footer__address {
     display: block;
-    width: 112px;
+    width: 155px;
 }
 
 .main-footer__about {
@@ -208,6 +218,10 @@ body {
     width: 68px;
     height: 58px;
     margin: 0;
+}
+
+.ari-logo-link {
+    height: 58px;
 }
 
 .auth-page__container {
@@ -268,7 +282,10 @@ body {
     /*margin: -1px;*/
 }
 
+.auth-link:hover,
+.auth-link:visited,
 .auth-link {
+    color: black;
     display: inline-block;
     text-align: center;
     text-decoration: none;
@@ -290,17 +307,6 @@ body {
     .form__chart {
         width: 600px;
         height: 300px;
-    }
-    .table-wrapper__table {
-        margin: 0 auto;
-        margin-top: 20px;
-    }
-    .table-wrapper__table th {
-    font-size: 16px;
-    }
-
-    .table-wrapper__table td {
-    font-size: 18px;
     }
     .sensor1 {
         top: 90px;

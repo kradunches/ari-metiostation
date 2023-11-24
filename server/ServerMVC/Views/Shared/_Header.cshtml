@@ -7,14 +7,19 @@
     <input class="main-header__button sample-button" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
     @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
     <input class="main-header__button sample-button" type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
-    <img class="ari-logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
+    
+    <a class="ari-logo-link" asp-controller="Home" asp-action="Index">
+        <img class="ari-logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
+    </a>
+    <input class="main-header__button sample-button" type="submit" value="Анализ" />
     @if (!User.Identity.IsAuthenticated)
     {
-        <a class="main-header__auth sample-button" asp-controller="Account" asp-action="Register">Регистрация</a>
-        <a class="main-header__auth sample-button" asp-controller="Account" asp-action="Login">Войти</a>
+        <button class="main-header__button sample-button" onclick="location.href='@Url.Action("Register", "Account")'">Регистрация</button>
+        <button class="main-header__button sample-button" onclick="location.href='@Url.Action("Login", "Account")'">Войти</button>
     }
     @if (User.Identity.IsAuthenticated)
     {
+        <div class="main-header__user-greeteng"><p>Добрый день, @User.Identity.Name</p></div>
         <form method="post" asp-controller="Account" asp-action="Logout">
             <input class="sample-button" type="submit" value="Выход" />
         </form>

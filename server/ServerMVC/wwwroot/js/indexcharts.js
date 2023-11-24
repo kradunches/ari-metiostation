@@ -44,36 +44,118 @@
         function OnSuccessResult(temperatureChart) {
             var chartLabels = temperatureChart[0];
             var chartData = temperatureChart[1];
-            var chartMatter = {
-                chart: {
-                    height: 280,
-                    type: "area"
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                series: [
-                    {
-                        name: seriesName,
-                        data: chartData
+            var chartWindDirData = temperatureChart[2];
+            var chartMatter;
+            if (chartWindDirData != null) {
+                chartMatter = {
+                    chart: {
+                        height: 280,
+                        type: "area"
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    annotations: {
+                        yaxis: [
+                            {
+                                y: 0,
+                                y2: 90,
+                                borderColor: '#000',
+                                fillColor: '#FEB019',
+                                label: {
+                                    text: 'Восток'
+                                }
+                            }, {
+                                y: 91,
+                                y2: 180,
+                                borderColor: '#000',
+                                fillColor: 'Khaki',
+                                label: {
+                                    text: 'Юг'
+                                }
+                            },
+                            {
+                                y: 181,
+                                y2: 270,
+                                borderColor: '#000',
+                                fillColor: 'YellowGreen',
+                                label: {
+                                    text: 'Запад'
+                                }
+                            },
+                            {
+                                y: 360,
+                                y2: 271,
+                                borderColor: '#000',
+                                fillColor: 'DarkTurquoise',
+                                label: {
+                                    text: 'Север'
+                                }
+                            },
+                        ]
+                    },
+                    series: [
+                        {
+                            name: seriesName,
+                            data: chartData
+                        },
+                        {
+                            name: "направление (sin)",
+                            data: chartWindDirData
+                        }
+                    ],
+                    fill: {
+                        type: "gradient",
+                        gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.7,
+                            opacityTo: 0.9,
+                            stops: [0, 90, 100]
+                        }
+                    },
+                    xaxis: {
+                        categories: chartLabels,
+                        labels: {
+                            rotate: -45
+                        }
+                    },
+                    yaxis: {
+                        max: 400
                     }
-                ],
-                fill: {
-                    type: "gradient",
-                    gradient: {
-                        shadeIntensity: 1,
-                        opacityFrom: 0.7,
-                        opacityTo: 0.9,
-                        stops: [0, 90, 100]
+                };
+            }
+            else {
+                chartMatter = {
+                    chart: {
+                        height: 280,
+                        type: "area"
+                    },
+                    dataLabels: {
+                        enabled: false
+                    },
+                    series: [
+                        {
+                            name: seriesName,
+                            data: chartData
+                        }
+                    ],
+                    fill: {
+                        type: "gradient",
+                        gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.7,
+                            opacityTo: 0.9,
+                            stops: [0, 90, 100]
+                        }
+                    },
+                    xaxis: {
+                        categories: chartLabels,
+                        labels: {
+                            rotate: -45
+                        }
                     }
-                },
-                xaxis: {
-                    categories: chartLabels,
-                    labels: {
-                        rotate: -45
-                    }
-                }
-            };
+                };
+            }
 
             switch (type) {
                 case "Twind":
@@ -147,16 +229,36 @@
         function OnSuccessResult(temperatureChart) {
             var chartLabels = temperatureChart[0];
             var chartData = temperatureChart[1];
-            chart.updateOptions({
-                xaxis: {
-                    categories: chartLabels
-                },
-                series: [
-                    {
-                        data: chartData
-                    }
-                ]
-            })
+            var chartWindDirData = temperatureChart[2];
+            if (chartWindDirData != null) {
+                chart.updateOptions({
+                                xaxis: {
+                                    categories: chartLabels
+                                },
+                                series: [
+                                    {
+                                        data: chartData
+                                    },
+                                    {
+                                        name: "направление (град)",
+                                        data: chartWindDirData
+                                    }
+                                ]
+                            })
+            }
+            else {
+                chart.updateOptions({
+                                xaxis: {
+                                    categories: chartLabels
+                                },
+                                series: [
+                                    {
+                                        data: chartData
+                                    }
+                                ]
+                            })
+            }
+            
         }
         function OnError(err) {
 
