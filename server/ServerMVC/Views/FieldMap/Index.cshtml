@@ -12,9 +12,9 @@
         <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
         <div class="field-map__map">
             <img class="main-header__fieldimg" src="/img/fieldmap.png" alt="День поля">
-            <button class="field-map__sensor-button sensor1" value="First"></button>
+            @* <button class="field-map__sensor-button sensor1" value="First"></button>
             <button class="field-map__sensor-button sensor2" value="Second"></button>
-            <button class="field-map__sensor-button sensor3" value="Third"></button>
+            <button class="field-map__sensor-button sensor3" value="Third"></button> *@
             
             <div class="form__chart field-map__chart"></div>
             <div class="main-info table-wrapper"></div>
@@ -28,6 +28,7 @@
 <script src="_content/Blazor-ApexCharts/js/apex-charts.min.js"></script>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="/js/fieldmapchart.js" type="text/javascript"></script>
+<script src="/js/mobileheadermenu.js" type="text/javascript"></script>
 <script>
     $(function () {
         var calendarButton = document.querySelector(".main-header__calendar");

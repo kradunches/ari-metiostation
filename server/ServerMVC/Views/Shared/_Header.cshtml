@@ -1,25 +1,26 @@
-﻿<div class="main-header__top">
+﻿<div class="main-header__top main-header__top--closed main-header__top--nojs">
+    <button class="main-header__top__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     @{
         //DateTime.Now.ToString("yyyy-MM-dd")
-        var calendar = Html.TextBox("Name", "2023-09-06", new { @class = "main-header__calendar", @type = "date", @id = "calendar", @name = "calendarInput" });
+        var calendar = Html.TextBox("Name", "2023-09-06", new { @class = "main-header__calendar site-list__item", @type = "date", @id = "calendar", @name = "calendarInput" });
     }
     @calendar
-    <input class="main-header__button sample-button" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
+    <input class="main-header__button sample-button site-list__item" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />
     @* <input class="main-header__calendar" type="date" id="calendar" name="calendarInput" value="2023-10-27"> *@
-    <input class="main-header__button sample-button" type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
+    <input class="main-header__button sample-button site-list__item" type="submit" onclick="location.href='@Url.Action("Index", "FieldMap")'" value="Датчики" />
     
-    <a class="ari-logo-link" asp-controller="Home" asp-action="Index">
+    @* <a class="ari-logo-link main-header__logo-link" asp-controller="Home" asp-action="Index">
         <img class="ari-logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
-    </a>
-    <input class="main-header__button sample-button" type="submit" value="Анализ" />
+    </a> *@
+    <input class="main-header__button sample-button site-list__item" type="submit" value="Анализ" />
     @if (!User.Identity.IsAuthenticated)
     {
-        <button class="main-header__button sample-button" onclick="location.href='@Url.Action("Register", "Account")'">Регистрация</button>
-        <button class="main-header__button sample-button" onclick="location.href='@Url.Action("Login", "Account")'">Войти</button>
+        <button class="main-header__button sample-button site-list__item" onclick="location.href='@Url.Action("Register", "Account")'">Регистрация</button>
+        <button class="main-header__button sample-button site-list__item" onclick="location.href='@Url.Action("Login", "Account")'">Войти</button>
     }
     @if (User.Identity.IsAuthenticated)
     {
-        <div class="main-header__user-greeteng"><p>Добрый день, @User.Identity.Name</p></div>
+        <div class="main-header__user-greeteng site-list__item"><p>Добрый день, @User.Identity.Name</p></div>
         <form method="post" asp-controller="Account" asp-action="Logout">
             <input class="sample-button" type="submit" value="Выход" />
         </form>
