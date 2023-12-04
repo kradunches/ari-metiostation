@@ -8,18 +8,17 @@
     <header class="main-header">
         @await Html.PartialAsync("_Header")
     </header>
-    <main class="main-info field-map">
+    <main class="main-info">
         <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
-        <div class="field-map__map">
-            <img class="main-header__fieldimg" src="/img/fieldmap.png" alt="День поля">
-            @* <button class="field-map__sensor-button sensor1" value="First"></button>
-            <button class="field-map__sensor-button sensor2" value="Second"></button>
-            <button class="field-map__sensor-button sensor3" value="Third"></button> *@
-            
-            <div class="form__chart field-map__chart"></div>
-            <div class="main-info table-wrapper"></div>
-
-        </div>
+        <div class="main-header__fieldsensorimg-wrapper">
+            <img class="main-header__fieldsensorimg" src="/img/fieldmap.png" alt="День поля">
+        </div>            
+        @* <button class="field-map__sensor-button sensor1" value="First"></button>
+        <button class="field-map__sensor-button sensor2" value="Second"></button>
+        <button class="field-map__sensor-button sensor3" value="Third"></button> *@
+        
+        <div class="form__chart field-map__chart"></div>
+        <div class="main-info table-wrapper"></div>
     </main>
     <footer class="main-footer">
         @await Html.PartialAsync("_Footer")

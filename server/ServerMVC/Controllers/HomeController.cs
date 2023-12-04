@@ -52,7 +52,7 @@ namespace ServerMVC.Controllers
                             break;
                         case Measurement.TypeOfMeasure.wind:
                             decimal winddir = j.Select(p => p.winddir).First();
-                            winddirValues.Add(Math.Round(Math.Sin((double)winddir / 1200 * 360 / 180 * Math.PI) * 400, 2));
+                            winddirValues.Add(Math.Abs(Math.Round(Math.Sin((double)winddir / 1200 * 360 / 180 * Math.PI) * 400, 2));
                             outNumVal = j.Select(p => p.wind).First();
                             break;
                     }

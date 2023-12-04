@@ -196,6 +196,7 @@ body {
 }
 
 .main-header__fieldimg {
+    margin-top: 50px;
     width: 320px;
 }
 
@@ -249,8 +250,14 @@ body {
     padding: 5px;
 }
 
-.field-map__map {
-    position: relative;
+.main-header__fieldsensorimg-wrapper {
+    width: 280px;
+    height: 155px;
+}
+
+.main-header__fieldsensorimg {
+    max-width: 100%;
+    height: auto;
 }
 
 .field-map__sensor-button {
@@ -408,6 +415,10 @@ body {
     width: 600px;
     height: 300px;
     }
+    .main-header__fieldsensorimg-wrapper {
+        width: 748px;
+        height: 413px;
+    }
     .sensor1 {
         top: 90px;
         left: 585px;
@@ -446,6 +457,10 @@ body {
 
     .form__chart {
         width: 500px;
+    }
+    .main-header__fieldsensorimg-wrapper {
+        width: 900px;
+        height: 498px;
     }
     .sensor1 {
         top: 130px;
