@@ -63,6 +63,7 @@
                                 borderColor: '#000',
                                 fillColor: '#FEB019',
                                 label: {
+                                    offsetY: 20,
                                     text: 'Восток'
                                 }
                             }, {
@@ -71,6 +72,7 @@
                                 borderColor: '#000',
                                 fillColor: 'Khaki',
                                 label: {
+                                    offsetY: 20,
                                     text: 'Юг'
                                 }
                             },
@@ -80,6 +82,7 @@
                                 borderColor: '#000',
                                 fillColor: 'YellowGreen',
                                 label: {
+                                    offsetY: 20,
                                     text: 'Запад'
                                 }
                             },
@@ -89,6 +92,7 @@
                                 borderColor: '#000',
                                 fillColor: 'DarkTurquoise',
                                 label: {
+                                    offsetY: 20,
                                     text: 'Север'
                                 }
                             },
