@@ -289,19 +289,3 @@
         renderChart("WindSpeed");
     })
 });
-
-//var calendarButton = document.querySelector(".main-header__calendar");
-//$(".main-header__calendar").on("change", function () {
-//    var calendarValue = this.value;
-//    var url = "/Home/GetCalendarDate";
-//    $.get(url, { date: calendarValue });
-//});
-
-
-//calendarButton.addEventListener("change", function () {
-//    var calendarValue = document.querySelector(".main-header__calendar").value;
-//    var url = "/Home/GetCalendarDate";
-//    $.get(url, { date: calendarValue });
-//    console.log(calendarValue);
-//    window.location.reload();
-//});

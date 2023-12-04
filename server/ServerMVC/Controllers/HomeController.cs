@@ -21,7 +21,6 @@ namespace ServerMVC.Controllers
             List<decimal> values = new List<decimal>();
             List<double> winddirValues = new List<double>();
             startDate = startDate.ToUniversalTime();
-            //for (int i = 0; i < daysAmount; i++)
             for  (int i = daysAmount - 1; i >= 0; i--)
             {
                 IQueryable<IGrouping<int, Measurement>> lookup = _measurementRepository.Measurements.Where(p => p.measure_date == startDate.AddDays(-i).ToUniversalTime()).GroupBy(p => p.measure_hour);

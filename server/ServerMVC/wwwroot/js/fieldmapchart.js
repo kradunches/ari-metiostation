@@ -69,8 +69,8 @@
                     }
                 },
                 legend: {
-                    position: 'top',
-                    horizontalAlign: 'left'
+                    position: 'bottom',
+                    horizontalAlign: 'center'
                 },
                 xaxis: {
                     categories: chartLabels
