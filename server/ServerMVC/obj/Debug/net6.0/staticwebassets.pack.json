@@ -1,0 +1,325 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ServerMVC.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ServerMVC.bundle.scp.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\agrophysLogo.png",
+      "PackagePath": "staticwebassets\\img\\agrophysLogo.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\calendar.png",
+      "PackagePath": "staticwebassets\\img\\calendar.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\dayOfTheField.png",
+      "PackagePath": "staticwebassets\\img\\dayOfTheField.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\fieldmap.PNG",
+      "PackagePath": "staticwebassets\\img\\fieldmap.PNG"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\menkovomap.png",
+      "PackagePath": "staticwebassets\\img\\menkovomap.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\East.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\East.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\North.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\North.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\NorthEast.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\NorthEast.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\NorthWest.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\NorthWest.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\South.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\South.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\SouthEast.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\SouthEast.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\SouthWest.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\SouthWest.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\img\\windDirections\\West.png",
+      "PackagePath": "staticwebassets\\img\\windDirections\\West.png"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\js\\fieldmapchart.js",
+      "PackagePath": "staticwebassets\\js\\fieldmapchart.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\js\\indexcharts.js",
+      "PackagePath": "staticwebassets\\js\\indexcharts.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\js\\mobileheadermenu.js",
+      "PackagePath": "staticwebassets\\js\\mobileheadermenu.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "F:\\C#\\ari-metiostation\\server\\ServerMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ServerMVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ServerMVC.props",
+      "PackagePath": "build\\ServerMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ServerMVC.props",
+      "PackagePath": "buildMultiTargeting\\ServerMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ServerMVC.props",
+      "PackagePath": "buildTransitive\\ServerMVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
