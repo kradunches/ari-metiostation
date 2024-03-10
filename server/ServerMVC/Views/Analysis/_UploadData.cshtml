@@ -1,0 +1,15 @@
+﻿@model List<string[]>
+
+@{
+    if (Model.Count() > 1)
+    {
+        @foreach (var observations in Model)
+        {
+            <p>@foreach(var obs in observations){@obs}</p>
+        }
+    }
+    else
+    {
+        <h1 class="info-header">Ошибка.</h1>
+    }
+}

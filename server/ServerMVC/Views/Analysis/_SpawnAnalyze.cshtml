@@ -1,0 +1,24 @@
+﻿@using ServerMVC.Infrastructure.Statistics
+@model Anova
+@{
+    if (Model == null)
+    {
+        <p>Ошибка при вводе входных данных</p>
+    }
+    else
+    {
+        <div>
+            <p>SS<sub>a</sub>: @Model.SSa</p>
+            <p>SS<sub>e</sub>: @Model.SSe</p>
+            <p>df<sub>a</sub>: @Model.dfA</p>
+            <p>df:  @Model.df</p>
+            <p>MS<sub>a</sub>: @Model.MSa</p>
+            <p>MS<sub>e</sub>: @Model.MSe</p>
+            <p>F:   @Model.F</p>
+            <p>F<sub>%5</sub>: @Model.Fcrit</p>
+            <p>p:   @Model.p</p>
+            <p>F<sub>r</sub>:  @Model.Frnk</p>
+            <p>p<sub>r</sub>:  @Model.Prnk</p>
+        </div>
+    }
+}

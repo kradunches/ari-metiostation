@@ -184,6 +184,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 14px;
 }
 
 .form__chart {
@@ -251,6 +252,7 @@ body {
 }
 
 .main-header__fieldsensorimg-wrapper {
+    position: relative;
     width: 280px;
     height: 155px;
 }
@@ -268,19 +270,25 @@ body {
 .sensor1 {
     position: absolute;
     top: 35px;
-    left: 235px;
+    left: 205px;
 }
 
 .sensor2 {
     position: absolute;
     top: 70px;
-    left: 235px;
+    left: 205px;
 }
 
 .sensor3 {
     position: absolute;
     top: 50px;
-    left: 195px;
+    left: 175px;
+}
+
+.sensorAll {
+    margin: 20px;
+    width: 80px;
+    height: 40px;
 }
 
 .field-map__chart {
@@ -316,6 +324,48 @@ body {
 
 .ari-logo-link {
     height: 58px;
+}
+
+.analysis__instructions {
+    margin: 20px;
+}
+
+.analysis__process-wrapper {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.analysis__process-section {
+    width: 320px;
+    height: 350px;
+}
+
+.analysis__process-section:nth-child(2) {
+    height:65px;
+}
+
+.analysis__process-section:nth-child(3) {
+    padding:35px 0 0 35px;
+}
+
+.analysis__input-data {
+    display: block;
+    width: 200px;
+    height: 260px;
+    margin: 20px auto;
+}
+
+.analysis__button-analysis {
+    width: 70px;
+    height: 30px;
+    display: block;
+    margin: 20px auto;
+}
+
+.analysis__table-wraper {
+    width: 300px;
+    height: 200px;
 }
 
 .auth-page__container {
@@ -433,6 +483,34 @@ body {
         top: 135px;
         left: 495px;
     }
+    .analysis__process-wrapper {
+        width: 768px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .analysis__process-section {
+        width: 256px;
+        height: 370px;
+    }
+
+    .analysis__input-data {
+        margin: 20px;
+        width: 200px;
+        height: 300px;
+    }
+
+    .analysis__button-analysis {
+        width: 70px;
+        height: 30px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .analysis__table-wraper {
+        width: 300px;
+        height: 200px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -464,17 +542,17 @@ body {
     }
     .sensor1 {
         top: 130px;
-        left: 940px;
+        left: 700px;
     }
 
     .sensor2 {
-        top: 270px;
-        left: 940px;
+        top: 240px;
+        left: 700px;
     }
 
     .sensor3 {
         top: 205px;
-        left: 755px;
+        left: 605px;
     }
 }
 

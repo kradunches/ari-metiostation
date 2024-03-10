@@ -12,7 +12,7 @@
     @* <a class="ari-logo-link main-header__logo-link" asp-controller="Home" asp-action="Index">
         <img class="ari-logo" src="/img/agrophysLogo.png" alt="Логотип АФИ">
     </a> *@
-    <input class="main-header__button sample-button site-list__item" type="submit" value="Анализ" />
+    <input class="main-header__button sample-button site-list__item" type="submit" onclick="location.href='@Url.Action("Index", "Analysis")'" value="Анализ" />
     @if (!User.Identity.IsAuthenticated)
     {
         <button class="main-header__button sample-button site-list__item" onclick="location.href='@Url.Action("Register", "Account")'">Регистрация</button>

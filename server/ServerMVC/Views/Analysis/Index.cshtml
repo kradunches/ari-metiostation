@@ -1,0 +1,78 @@
+﻿@{
+    Layout = "_Layout";
+}
+@model List<string[]>
+<div class="page__container">
+    <header class="main-header">
+        @await Html.PartialAsync("_Header")
+    </header>
+    <main class="main-info">
+        <h1 class="visually-hidden">Сайт метеостанции поля в Меньково</h1>
+        <span class="analysis__instructions">На данной странице представлена возможность проведения однофакторного дисперсионного анализа данных. С помощью этого вида анализа можно оценить наличие или отсутствие существенного влтяния какого-либо качественного или количественного фактора на изменения исследуемого результативного признака. Для этого фактор, предположительно оказывающий влияние на исследуемый признак делят на группы, например: исследуемый признак - урожай, группы фактора: три различных дозы удобрения. Суть дисперсионного анализа выражается в расчёте отношения межгрупповой дисперсии к внутригрупповой, это отношение выражается как фактическое значение критерия Фишера. Если фактическое это значение больше критического значения фишера (взятое из таблицы), то можно утверждать, что исследуемый фактор действительно влияет на исследуемый признак (в данном примере влияние различных доз удобрения на урожайность). Также применяется параметрический вариант дисперсионного анализа, он необходим когда вводимые данные не подчиняются закону нормального распределения. Если параметрический тест проводить на нормально распределённых данных, то результат будет менее достоверен, чем при обычном непараметрическом тесте.</span>
+        <span class="analysis__instructions">Чтобы провести анализ, для начала необходимо загрузить данные. Данные должныбыть в формате .csv, без заголовка с разделителем "запятая", где один фактор соответствует строке. После нажатия кнопки "Загрузка" загруженными данными можно будет ознакомиься в сгенерированной таблице. Затем необходимо нажать на кнопку "Анализ", после чего на странице будут выведены выводы по проведённому исследованию.</span>
+        <div class="analysis__process-wrapper">
+            <div class="analysis__process-section">
+                @* <form id="form" name="analysis__form-upload" action="Analysis/_UploadData" enctype="multipart/form-data" method="post">
+                    <input class ="analysis__button-file-upload" size="1" type="file" name="upload" /><br>
+                    <input class ="analysis__button-load" type="submit" value="Загрузка" />
+                </form>
+                <div class="analysis__table-wraper"></div> *@
+            <textarea class="analysis__input-data"></textarea>
+            </div>
+            <div class="analysis__process-section">
+                <button class="analysis__button-analysis">Анализ</button>
+            </div>
+            <div class="analysis__process-section">
+                <div class="analysis__results"></div>
+            </div>
+        </div>
+        <span class="analysis__instructions">Пояснение к интерпретации результатов: SS<sub>a</sub> - это объяснённая влиянием фактора сумма квадратов отклонений. SS<sub>e</sub> - необъяснённая сумма квадратов отклонений или сумма квадратов отклонений ошибки. df<sub>a</sub> - число степеней свободы для фактора. df - общее число степеней свободы. MS<sub>a</sub> - объяснённая дисперсия. MS<sub>e</sub> - необъяснённая дисперсия. F - фактическое значение Фишера. F<sub>%5</sub> - критическое (табличное значение Фишера). p - статистический уровень значимости. F<sub>r</sub> - фактическое значение фишера для непараметрического теста. p<sub>r</sub> - статистический уровень значимости для непараметрического теста.<br />Для того чтобы сказать, что исследуемый фактор влияет на наблюдения, необходимо чтобы фактическое значение Фишера превышало критическое значение Фишера, также p-уровень значимости должен быть меньше 0,05.</span>
+    </main>
+    <footer class="main-footer">
+        @await Html.PartialAsync("_Footer")
+    </footer>
+</div>
+<script>
+    $(function () {
+        $(".analysis__button-analysis").on("click", function () {
+            var textareaValue = document.querySelector(".analysis__input-data").value;
+            console.log(textareaValue);
+            console.log(typeof textareaValue);
+            $.ajax({
+                url: '@Url.Action("_SpawnAnalyze")',
+                dataType: 'html',
+                contentType: 'application/html; charset=utf-8',
+                type: 'GET',
+                data: {
+                    inputData: textareaValue
+                },
+                success: function (data) {
+                    $('.analysis__results').html(data);
+                }
+            });
+        });
+
+
+        // var downloadButton = document.querySelector(".analysis__button-load");
+        // $("#form-upload").submit(function (e) {
+        //     e.preventDefault();
+        //     var fileUpload = $(".analysis__button-file-upload").get(0);
+        //     var data = new FormData();
+        //     data.append(fileUpload.files[0].name, fileUpload.files[0]);
+        //     //console.log(data);
+        //     $.ajax({
+        //         url: '@Url.Action("_UploadData")',
+        //         type: 'POST',
+        //         data: 
+        //         {
+        //             upload: data
+        //         },
+        //         processData: false,
+        //         contentType: false,
+        //         success: function (data) {
+        //             $('.table-wrapper').html(data);
+        //         }
+        //     });
+        // });
+    });
+</script>
