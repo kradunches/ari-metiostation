@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic.FileIO;
 using ServerMVC.Infrastructure.Statistics;
+using System.Globalization;
 
 namespace ServerMVC.Controllers
 {
@@ -17,7 +18,7 @@ namespace ServerMVC.Controllers
             ViewBag.Title = "Анализ";
             return View();
         }
-        OneFactorData[] RangeData(OneFactorData[] d)
+        public OneFactorData[] RangeData(OneFactorData[] d)
         {
             Dictionary<double, double> monolithRankedArray = new Dictionary<double, double>();
             int n = 0;
@@ -75,13 +76,14 @@ namespace ServerMVC.Controllers
             string[] strGroups = inputData.Split(new char[] { '\n' });
             OneFactorData[] inputAnovaData = new OneFactorData[strGroups.Length];
             int i = 0;
-            foreach(string strGroup in strGroups)
+            IFormatProvider formatter = new NumberFormatInfo { NumberDecimalSeparator = "." };
+            foreach (string strGroup in strGroups)
             {
                 List<double> listObservations = new List<double>();
                 string[] strObs = strGroup.Split(new char[] { ',' });
                 foreach(string s in strObs)
                 {
-                    if (double.TryParse(s, out var number))
+                    if (double.TryParse(s, NumberStyles.AllowDecimalPoint, formatter, out double number))
                         listObservations.Add(number);
                     else 
                         return PartialView("_SpawnAnalyze", null);
