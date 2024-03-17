@@ -125,6 +125,9 @@ body {
     .main-header__top--nojs {
         position: relative;
     }
+    .main-header__top--nojs .site-list__item {
+        display: block;
+    }
     .main-header__top--nojs .main-header__top__toggle {
         display: none;
     }

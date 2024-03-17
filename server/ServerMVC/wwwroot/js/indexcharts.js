@@ -58,7 +58,7 @@
                     annotations: {
                         yaxis: [
                             {
-                                y: 0,
+                                y: 1,
                                 y2: 90,
                                 borderColor: '#000',
                                 fillColor: '#FEB019',
@@ -124,7 +124,8 @@
                         }
                     },
                     yaxis: {
-                        max: 400
+                        min: 1,
+                        max: 360
                     }
                 };
             }
