@@ -24,7 +24,7 @@ namespace ServerMVC.Controllers
             for  (int i = daysAmount - 1; i >= 0; i--)
             {
                 //IQueryable<IGrouping<int, meteo1>> lookup = _measurementRepository.Measurements.Where(p => p.reg_date == startDate.AddDays(-i).ToUniversalTime()).GroupBy(p => p.reg_date.Hour);
-                IQueryable<IGrouping<int, meteo1>> lookup = _measurementRepository.Measurements.Where(p => p.reg_date.Year == startDate.AddDays(-i).ToUniversalTime().Year && p.reg_date.Month == startDate.AddDays(-i).ToUniversalTime().Month && p.reg_date.Day - 1 == startDate.AddDays(-i).ToUniversalTime().Day).GroupBy(p => p.reg_date.Hour);
+                IQueryable<IGrouping<int, meteo1>> lookup = _measurementRepository.Measurements.Where(p => p.reg_date.Year == startDate.AddDays(-i).Year && p.reg_date.Month == startDate.AddDays(-i).Month && p.reg_date.Day - 1== startDate.AddDays(-i).Day).GroupBy(p => p.reg_date.Hour);
                 var tmp = lookup.ToList();
                 foreach (var j in tmp)
                 {
@@ -96,7 +96,7 @@ namespace ServerMVC.Controllers
         [HttpGet]
         public PartialViewResult _GetTable(DateTime date)
         {
-            var tmp = _measurementRepository.Measurements.Where(p => p.reg_date.Year == date.ToUniversalTime().Year && p.reg_date.Month == date.ToUniversalTime().Month && p.reg_date.Day - 1 == date.ToUniversalTime().Day);
+            var tmp = _measurementRepository.Measurements.Where(p => p.reg_date.Year == date.Year && p.reg_date.Month == date.Month && p.reg_date.Day == date.Day);
             return PartialView(tmp);
         }
         public ViewResult Index() 
