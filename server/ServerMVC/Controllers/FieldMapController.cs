@@ -13,35 +13,35 @@ namespace ServerMVC.Controllers
         {
             _moistmeterRepository = moistRepo;
         }
-        public List<object> IncarnateMoistMeasurement(DateTime startDate, string sensorName)
+        public List<object> IncarnateMoistMeasurement(DateTime startDate, int sensorName)
         {
             List<object> temperatureChart = new List<object>();
             List<string> labels = new List<string>();
-            List<decimal> valuesChan1 = new List<decimal>();
-            List<decimal> valuesChan2 = new List<decimal>();
-            List<decimal> valuesChan3 = new List<decimal>();
-            List<decimal> valuesChan4 = new List<decimal>();
-            List<decimal> valuesChan5 = new List<decimal>();
-            IQueryable<IGrouping<int, Moistmeter>> lookup;
+            List<double> valuesChan1 = new List<double>();
+            List<double> valuesChan2 = new List<double>();
+            List<double> valuesChan3 = new List<double>();
+            List<double> valuesChan4 = new List<double>();
+            List<double> valuesChan5 = new List<double>();
+            IQueryable<IGrouping<int, agro_moist>> lookup;
             startDate = startDate.ToUniversalTime();
-            if (sensorName != null)
-                lookup = _moistmeterRepository.Moistmeters.Where(p => p.measure_date == startDate && p.name == sensorName).GroupBy(p => p.measure_hour);
+            if (sensorName != 0)
+                lookup = _moistmeterRepository.Moistmeters.Where(p => p.reg_date == startDate && p.sensor == sensorName).GroupBy(p => p.reg_date.Hour);
             else
-                lookup = _moistmeterRepository.Moistmeters.Where(p => p.measure_date == startDate).GroupBy(p => p.measure_hour);
+                lookup = _moistmeterRepository.Moistmeters.Where(p => p.reg_date == startDate).GroupBy(p => p.reg_date.Hour);
             var tmp = lookup.ToList();
             foreach (var j in tmp)
             {
-                int year = j.Select(p => p.measure_date.Year).First();
-                int month = j.Select(p => p.measure_date.Month).First();
-                int day = j.Select(p => p.measure_date.Day).First();
-                int hour = j.Select(p => p.measure_hour).First();
+                int year = j.Select(p => p.reg_date.Year).First();
+                int month = j.Select(p => p.reg_date.Month).First();
+                int day = j.Select(p => p.reg_date.Day).First();
+                int hour = j.Select(p => p.reg_date.Hour).First();
                 DateTime outDate = new DateTime(year, month, day, hour, 0, 0);
                 string outStrDate = outDate.ToString("MM-dd HH:mm");
-                int chan1val = j.Select(p => p.channel1).First();
-                int chan2val = j.Select(p => p.channel2).First();
-                int chan3val = j.Select(p => p.channel3).First();
-                int chan4val = j.Select(p => p.channel4).First();
-                int chan5val = j.Select(p => p.channel5).First();
+                double chan1val = j.Select(p => p.m1).First();
+                double chan2val = j.Select(p => p.m2).First();
+                double chan3val = j.Select(p => p.m3).First();
+                double chan4val = j.Select(p => p.m4).First();
+                double chan5val = j.Select(p => p.m5).First();
                 labels.Add(outStrDate);
                 valuesChan1.Add(chan1val);
                 valuesChan2.Add(chan2val);
@@ -58,16 +58,16 @@ namespace ServerMVC.Controllers
             return temperatureChart;
         }
         [HttpGet]
-        public List<object> GetData(DateTime date, string sensorName)
+        public List<object> GetData(DateTime date, int sensorName)
         {
             return IncarnateMoistMeasurement(date.ToUniversalTime(), sensorName);
         }
         [HttpGet]
-        public PartialViewResult _GetMoistmeterTable(DateTime date, string sensorName)
+        public PartialViewResult _GetMoistmeterTable(DateTime date, int sensorName)
         {
             if (sensorName != null)
-                return PartialView(_moistmeterRepository.Moistmeters.Where(p => p.measure_date == date.ToUniversalTime() && p.name == sensorName));
-            return PartialView(_moistmeterRepository.Moistmeters.Where(p => p.measure_date == date.ToUniversalTime()));
+                return PartialView(_moistmeterRepository.Moistmeters.Where(p => p.reg_date == date.ToUniversalTime() && p.sensor == sensorName));
+            return PartialView(_moistmeterRepository.Moistmeters.Where(p => p.reg_date == date.ToUniversalTime()));
         }
         public ViewResult Index() 
         {

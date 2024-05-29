@@ -1,4 +1,4 @@
-﻿@model IQueryable<Moistmeter>
+﻿@model IQueryable<agro_moist>
 
 @{
     if (Model.Count() > 1)
@@ -10,15 +10,15 @@
             <tbody>
                 @foreach (var measure in Model)
                 {
-                    DateTime date = new DateTime(measure.measure_date.Year, measure.measure_date.Month, measure.measure_date.Day, measure.measure_hour, 0, 0);
+                    DateTime date = new DateTime(measure.reg_date.Year, measure.reg_date.Month, measure.reg_date.Day, measure.reg_date.Hour, 0, 0);
                     <tr>
                         <td>@date.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@measure.channel1</td>
-                        <td>@measure.channel2</td>
-                        <td>@measure.channel3</td>
-                        <td>@measure.channel4</td>
-                        <td>@measure.channel5</td>
-                        <td>@measure.name</td>
+                        <td>@measure.m1</td>
+                        <td>@measure.m2</td>
+                        <td>@measure.m3</td>
+                        <td>@measure.m4</td>
+                        <td>@measure.m5</td>
+                        <td>@measure.sensor</td>
                     </tr>
                 }
             </tbody>

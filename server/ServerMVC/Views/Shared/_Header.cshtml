@@ -2,7 +2,7 @@
     <button class="main-header__top__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
     @{
         //DateTime.Now.ToString("yyyy-MM-dd")
-        var calendar = Html.TextBox("Name", "2023-09-06", new { @class = "main-header__calendar site-list__item", @type = "date", @id = "calendar", @name = "calendarInput" });
+        var calendar = Html.TextBox("Name", "2024-05-06", new { @class = "main-header__calendar site-list__item", @type = "date", @id = "calendar", @name = "calendarInput" });
     }
     @calendar
     <input class="main-header__button sample-button site-list__item" type="submit" onclick="location.href='@Url.Action("Index", "Home")'" value="Главная" />

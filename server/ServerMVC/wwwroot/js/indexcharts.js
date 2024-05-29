@@ -21,7 +21,7 @@
                 break;
             case "Tpov":
                 actionStr = "Tpov";
-                seriesName = "t поверхности почвы";
+                seriesName = "кол-во осадков";
                 chartClass = document.querySelector(".form__chart--tpov");
                 break;
             case "WindSpeed":

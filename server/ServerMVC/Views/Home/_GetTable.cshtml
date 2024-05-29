@@ -1,24 +1,24 @@
-﻿@model IQueryable<Measurement>
+﻿@model IQueryable<meteo1>
 @{
     if (Model.Count() > 1)
     {
         <table>
             <thead>
-                <tr><th><i>Дата</i></th><th><i>℃ почвы</i></th><th><i>Вт/м<sup>2</sup></i></th><th><i>лк</i></th><th><i>℃ воздух</i></th><th><i>рад</i></th><th><i>м/с</i></th></tr>
+                <tr><th><i>Дата</i></th><th><i>мм</i></th><th><i>Вт/м<sup>2</sup></i></th><th><i>лк</i></th><th><i>℃ воздух</i></th><th><i>рад</i></th><th><i>м/с</i></th></tr>
             </thead>
             <tbody>
                 @foreach (var measure in Model)
                 {
-                    DateTime date = new DateTime(measure.measure_date.Year, measure.measure_date.Month, measure.measure_date.Day, measure.measure_hour, measure.measure_min, 0, 0);
-                    decimal winddir = @measure.winddir/1200*360;
+                    DateTime date = new DateTime(measure.reg_date.Year, measure.reg_date.Month, measure.reg_date.Day, measure.reg_date.Hour, measure.reg_date.Minute, 0, 0);
+                    double winddir = @measure.wind_direction360/1200*360;
                     <tr>
                         <td>@date.ToString("yyyy-MM-dd HH:mm")</td>
-                        <td>@measure.t_pov</td>
-                        <td>@measure.far</td>
-                        <td>@measure.rh</td>
-                        <td>@measure.t</td>
+                        <td>@measure.optical_rainfall</td>
+                        <td>@measure.light</td>
+                        <td>@measure.humidity</td>
+                        <td>@measure.temperature</td>
                         <td>@Math.Round(winddir, 1)</td>
-                        <td>@measure.wind</td>
+                        <td>@measure.wind_speed</td>
                     </tr>
                 }
             </tbody>

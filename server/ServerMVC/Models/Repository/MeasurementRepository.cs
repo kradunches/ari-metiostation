@@ -10,6 +10,6 @@ namespace ServerMVC.Models.Repository
         {
             _context = context;
         }
-        public IQueryable<Measurement> Measurements => _context.Measurement;
+        public IQueryable<meteo1> Measurements => _context.meteo1;
     }
 }

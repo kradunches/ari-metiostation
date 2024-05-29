@@ -7,9 +7,9 @@ namespace ServerMVC.Models
     public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { Database.EnsureCreated(); }
-        public DbSet<Measurement> Measurement { get; set; }
+        public DbSet<meteo1> meteo1 { get; set; }
         public DbSet<User> User { get; set; }
-        public DbSet<Moistmeter> Moistmeter { get; set; }
+        public DbSet<agro_moist> agro_moist { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>(builder =>
@@ -21,8 +21,8 @@ namespace ServerMVC.Models
                     new User()
                     {
                         Id = 1,
-                        Name = "Admin",
-                        Password = HashPassword.HashPassowrd("123456"),
+                        Name = "meteo",
+                        Password = HashPassword.HashPassowrd("meteo"),
                         Role = Role.Admin
                     }
                 });

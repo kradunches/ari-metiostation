@@ -68,6 +68,8 @@ Thumbs.db
 *[Rr]esharper*
 packages
 NuGet.exe
+ApplicationDbContext.cs
+appsettings.json
 _[Ss]cripts
 *.exe
 *.dll

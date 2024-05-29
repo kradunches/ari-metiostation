@@ -7,6 +7,6 @@
         {
             _context = context;
         }
-        public IQueryable<Moistmeter> Moistmeters => _context.Moistmeter;
+        public IQueryable<agro_moist> Moistmeters => _context.agro_moist;
     }
 }

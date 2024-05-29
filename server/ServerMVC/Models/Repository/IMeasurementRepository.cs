@@ -4,6 +4,6 @@ namespace ServerMVC.Models.Repository
 {
     public interface IMeasurementRepository
     {
-        IQueryable<Measurement> Measurements { get; }
+        IQueryable<meteo1> Measurements { get; }
     }
 }

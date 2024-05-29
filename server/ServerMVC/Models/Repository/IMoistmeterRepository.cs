@@ -2,6 +2,6 @@
 {
     public interface IMoistmeterRepository
     {
-        IQueryable<Moistmeter> Moistmeters { get; }
+        IQueryable<agro_moist> Moistmeters { get; }
     }
 }
